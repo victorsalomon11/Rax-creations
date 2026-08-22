@@ -1,0 +1,1952 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>RAX Creations | Custom Apparel & Print USA</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --bg-dark: #0f172a;
+      --card-bg: #ffffff;
+      --brand-primary: #1e3a8a;
+      --brand-primary-hover: #1e40af;
+      --brand-accent: #e11d48;
+      --border-light: #e2e8f0;
+      --text-main: #0f172a;
+      --text-muted: #64748b;
+      --radius-lg: 16px;
+      --radius-md: 12px;
+      --shadow-wholesale: 0 10px 30px -5px rgba(15, 23, 42, 0.06);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    html, body {
+      width: 100%;
+      overflow-x: hidden;
+      background-color: #f8fafc;
+      color: var(--text-main);
+      line-height: 1.5;
+      padding-bottom: 120px;
+    }
+
+    /* TOP HEADER */
+    .brand-top-header {
+      background: var(--bg-dark);
+      border-bottom: 3px solid var(--brand-primary);
+      padding: 14px 16px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+      width: 100%;
+    }
+
+    .brand-header-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      width: 100%;
+    }
+
+    @media (max-width: 768px) {
+      .brand-header-inner { flex-direction: column; text-align: center; }
+    }
+
+    .brand-logo-container {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+
+    .logo-svg { height: 34px; width: auto; }
+
+    .brand-titles { display: flex; flex-direction: column; }
+    .brand-name { font-size: 1.15rem; font-weight: 900; color: #ffffff; letter-spacing: -0.5px; line-height: 1.1; }
+    .brand-name span { color: #60a5fa; }
+    .brand-subline { font-size: 0.55rem; color: #94a3b8; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; margin-top: 2px; }
+
+    .header-right-panel { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; justify-content: center; }
+
+    .location-badge {
+      background: rgba(16, 185, 129, 0.15);
+      border: 1px solid rgba(16, 185, 129, 0.4);
+      color: #34d399;
+      padding: 5px 10px;
+      border-radius: 99px;
+      font-size: 0.7rem;
+      font-weight: 850;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .account-link-btn {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: #ffffff;
+      padding: 6px 12px;
+      border-radius: 99px;
+      font-size: 0.72rem;
+      font-weight: 800;
+      cursor: pointer;
+      text-decoration: none;
+      transition: 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .account-link-btn:hover { background: rgba(255, 255, 255, 0.18); border-color: #60a5fa; }
+
+    .status-dot { width: 7px; height: 7px; background: #10b981; border-radius: 50%; box-shadow: 0 0 8px #10b981; }
+
+    .promo-banner-cta {
+      background: linear-gradient(135deg, #0284c7 0%, #1e3a8a 100%);
+      color: white;
+      padding: 14px 16px;
+      text-align: center;
+      font-size: 0.9rem;
+      font-weight: 800;
+      box-shadow: inset 0 -3px 0 rgba(0,0,0,0.2);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      text-decoration: none;
+      width: 100%;
+    }
+    .promo-banner-cta:hover { background: linear-gradient(135deg, #0369a1 0%, #1e40af 100%); }
+
+    .hero-welcome-section {
+      background: linear-gradient(135deg, #090d16 0%, #0f172a 50%, #1e3a8a 100%);
+      color: white;
+      padding: 36px 16px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.25);
+      margin-bottom: 24px;
+      width: 100%;
+    }
+    .hero-welcome-container { max-width: 750px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; width: 100%; }
+    .hero-title { font-size: 1.75rem; font-weight: 900; letter-spacing: -0.5px; line-height: 1.2; }
+    @media(max-width: 650px) { .hero-title { font-size: 1.35rem; } }
+    .hero-subtitle { font-size: 0.9rem; color: #cbd5e1; font-weight: 500; line-height: 1.5; }
+
+    .container { max-width: 900px; margin: 0 auto 24px auto; padding: 0 16px; width: 100%; }
+
+    .product-dropdown-container {
+      background: var(--card-bg);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-lg);
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: var(--shadow-wholesale);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      width: 100%;
+    }
+    .product-dropdown-container label {
+      font-size: 0.82rem;
+      font-weight: 800;
+      color: var(--brand-primary);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+    }
+    .product-select-dropdown {
+      width: 100%;
+      padding: 14px;
+      border: 2px solid #cbd5e1;
+      border-radius: var(--radius-md);
+      font-size: 1rem;
+      font-weight: 800;
+      color: var(--bg-dark);
+      background: #f8fafc;
+      outline: none;
+      cursor: pointer;
+      min-height: 52px;
+      transition: 0.2s;
+    }
+    .product-select-dropdown:focus {
+      border-color: var(--brand-primary);
+      background: #ffffff;
+      box-shadow: 0 0 0 4px rgba(30, 58, 138, 0.12);
+    }
+
+    .unified-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      box-shadow: var(--shadow-wholesale);
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      width: 100%;
+    }
+    @media(max-width: 650px) {
+      .unified-card { padding: 16px; }
+    }
+
+    .section-header-title {
+      font-size: 0.95rem;
+      font-weight: 900;
+      color: var(--bg-dark);
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .upload-zone-modern {
+      background: #f8fafc;
+      border: 2px dashed #93c5fd;
+      border-radius: var(--radius-md);
+      padding: 24px 16px;
+      text-align: center;
+      position: relative;
+      cursor: pointer;
+      transition: 0.2s;
+      width: 100%;
+    }
+    .upload-zone-modern:hover { background: #eff6ff; border-color: var(--brand-primary); }
+    .upload-zone-modern input[type="file"] { position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; cursor: pointer; }
+
+    .upload-box-simple {
+      background: #f8fafc; border: 1.5px solid var(--border-light); border-radius: var(--radius-md); padding: 12px;
+      display: flex; flex-direction: column; gap: 6px; margin-bottom: 10px; width: 100%;
+    }
+    .upload-box-simple label { font-size: 0.82rem; font-weight: 800; color: var(--bg-dark); }
+    .upload-box-simple input[type="file"] { font-size: 0.8rem; color: var(--text-muted); min-height: 38px; width: 100%; }
+
+    .options-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; width: 100%; }
+    .card-option {
+      border: 2px solid var(--border-light); background: #fafafa; padding: 14px; border-radius: 10px; text-align: center; cursor: pointer; transition: 0.2s;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      min-height: 50px;
+      width: 100%;
+      position: relative;
+    }
+    .card-option:hover { border-color: #cbd5e1; }
+    .card-option.selected { border-color: var(--brand-primary); background: #eff6ff; box-shadow: 0 4px 12px rgba(30,58,138,0.15); }
+    .card-option .opt-title { font-size: 0.85rem; font-weight: 800; display: block; text-align: center; width: 100%; }
+    .card-option .opt-price { font-size: 0.95rem; font-weight: 900; color: var(--brand-primary); display: block; margin-top: 3px; text-align: center; width: 100%; }
+    .card-option .opt-sublabel { font-size: 0.68rem; font-weight: 800; color: #1e3a8a; background: #dbeafe; padding: 2px 6px; border-radius: 4px; display: inline-block; margin-top: 4px; text-transform: uppercase; letter-spacing: 0.5px; }
+
+    .badge-most-popular {
+      position: absolute; top: -10px; right: 10px; background: var(--brand-accent); color: white; font-size: 0.6rem; font-weight: 900; padding: 2px 6px; border-radius: 4px; text-transform: uppercase; letter-spacing: 0.5px;
+    }
+
+    .unified-specs-roster-box {
+      background: #f8fafc; border: 1.5px solid var(--border-light); border-radius: var(--radius-md); padding: 16px; margin-top: 8px;
+      display: flex; flex-direction: column; gap: 12px; width: 100%;
+    }
+    .specs-grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; width: 100%; }
+    @media(max-width: 768px) { .specs-grid-3 { grid-template-columns: 1fr; } }
+
+    .roster-card-item {
+      background: #ffffff; 
+      border: 1.5px solid var(--border-light); 
+      border-radius: var(--radius-md); 
+      padding: 16px; 
+      margin-bottom: 12px;
+      display: flex; 
+      flex-direction: column; 
+      gap: 12px; 
+      position: relative; 
+      transition: all 0.2s ease;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+    }
+    .roster-card-item:hover { border-color: #93c5fd; box-shadow: 0 6px 16px rgba(30, 58, 138, 0.06); }
+    
+    .roster-card-top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1.5px solid #f1f5f9;
+      padding-bottom: 8px;
+    }
+    .roster-item-title {
+      font-size: 0.76rem;
+      font-weight: 900;
+      color: var(--brand-primary);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    
+    .roster-card-grid { display: grid; grid-template-columns: 1fr 1.3fr 1fr 1.3fr; gap: 10px; align-items: flex-end; width: 100%; }
+    @media(max-width: 650px) { .roster-card-grid { grid-template-columns: 1fr 1fr; gap: 10px; } }
+
+    .roster-complete-notice { background: #f0fdf4; border: 1.5px solid #86efac; color: #166534; padding: 10px; border-radius: 8px; font-size: 0.78rem; font-weight: 800; text-align: center; margin-top: 6px; width: 100%; display: none; }
+    
+    .btn-add-row { 
+      background: #ffffff; border: 2px dashed #93c5fd; color: var(--brand-primary); font-weight: 900; font-size: 0.82rem; padding: 12px; border-radius: var(--radius-md); width: 100%; cursor: pointer; margin-top: 6px; min-height: 48px; transition: 0.2s; 
+      display: flex; align-items: center; justify-content: center; gap: 6px;
+    }
+    .btn-add-row:hover { background: #eff6ff; border-color: var(--brand-primary); }
+
+    .btn-remove-row-styled {
+      background: #fef2f2; 
+      border: 1px solid #fecaca; 
+      color: #dc2626; 
+      font-size: 0.72rem; 
+      font-weight: 800; 
+      padding: 5px 10px; 
+      border-radius: 6px; 
+      cursor: pointer; 
+      display: inline-flex; 
+      align-items: center; 
+      gap: 4px; 
+      transition: 0.2s;
+    }
+    .btn-remove-row-styled:hover { background: #fee2e2; border-color: #f87171; }
+
+    .row-color-dropdown { position: relative; width: 100%; }
+    .row-color-btn {
+      width: 100%; background: white; border: 2px solid var(--border-light); border-radius: 8px; padding: 9px 10px; font-size: 0.78rem; font-weight: 800; display: flex; align-items: center; justify-content: space-between; cursor: pointer; min-height: 44px;
+    }
+    .row-color-popup {
+      display: none; position: absolute; top: 100%; left: 0; width: 200px; background: white; border: 2px solid var(--border-light); border-radius: 10px; padding: 10px; box-shadow: 0 10px 25px rgba(0,0,0,0.15); z-index: 100; margin-top: 4px;
+    }
+    .row-color-popup.open { display: block; }
+    .row-swatches { display: flex; gap: 6px; flex-wrap: wrap; }
+    .row-swatch { width: 26px; height: 26px; border-radius: 50%; border: 2px solid white; outline: 1.5px solid var(--border-light); cursor: pointer; transition: 0.2s; }
+    .row-swatch:hover { transform: scale(1.15); }
+
+    .qty-stepper-box {
+      background: #ffffff; border: 1.5px solid var(--border-light); border-radius: var(--radius-md); padding: 16px; display: flex; flex-direction: column; gap: 12px; margin-bottom: 12px; width: 100%;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    }
+    .qty-stepper-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
+    .stepper-controls {
+      display: flex;
+      align-items: center;
+      background: #f1f5f9;
+      border-radius: 8px;
+      padding: 3px;
+      border: 1.5px solid var(--border-light);
+    }
+    .step-btn {
+      background: #ffffff;
+      border: none;
+      width: 38px;
+      height: 38px;
+      border-radius: 6px;
+      font-size: 1.1rem;
+      font-weight: 900;
+      color: var(--brand-primary);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: 0.15s;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+    .step-btn:hover { background: var(--brand-primary); color: #ffffff; }
+    .step-input {
+      width: 55px;
+      text-align: center;
+      font-size: 1.1rem;
+      font-weight: 900;
+      color: var(--bg-dark);
+      border: none;
+      background: transparent;
+      outline: none;
+    }
+
+    .unit-price-minimal {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 8px 12px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--text-muted);
+    }
+    .unit-price-minimal strong {
+      color: var(--brand-primary);
+      font-size: 0.95rem;
+      font-weight: 900;
+    }
+
+    .volume-tier-legend {
+      background: #f8fafc;
+      border: 1.5px solid #cbd5e1;
+      border-radius: 10px;
+      padding: 12px 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-top: 6px;
+    }
+    .vtl-header {
+      font-size: 0.75rem;
+      font-weight: 900;
+      color: var(--brand-primary);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .vtl-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      font-size: 0.76rem;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+    .vtl-item {
+      background: #ffffff;
+      border: 1px solid var(--border-light);
+      padding: 4px 8px;
+      border-radius: 6px;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .vtl-item.highlight-tier {
+      border-color: #166534;
+      background: #f0fdf4;
+      color: #166534;
+      font-weight: 900;
+    }
+
+    .free-shipping-progress-box {
+      background: #f8fafc;
+      border: 1.5px solid #e2e8f0;
+      border-radius: 10px;
+      padding: 12px;
+      margin-bottom: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .fsp-header {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.76rem;
+      font-weight: 800;
+      color: var(--brand-primary);
+    }
+    .fsp-bar-bg {
+      width: 100%;
+      height: 8px;
+      background: #e2e8f0;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .fsp-bar-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #0284c7 0%, #10b981 100%);
+      width: 0%;
+      transition: width 0.3s ease;
+    }
+    .fsp-msg {
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      text-align: center;
+    }
+
+    .coupon-section-modern {
+      background: #f8fafc; border: 1.5px solid var(--border-light); border-radius: var(--radius-md); padding: 16px; margin-top: 14px; display: flex; flex-direction: column; gap: 8px;
+    }
+
+    .form-control { width: 100%; padding: 11px 14px; border: 1.5px solid var(--border-light); border-radius: 8px; font-size: 0.88rem; outline: none; background: #ffffff; font-weight: 600; transition: 0.2s; min-height: 44px; color: var(--text-main); }
+    .form-control:focus { border-color: var(--brand-primary); box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.1); }
+    
+    .divider-line { height: 1.5px; background: var(--border-light); margin: 16px 0; width: 100%; }
+
+    .btn-cart-submit {
+      width: 100%; background: var(--brand-primary); color: white; border: none; padding: 16px; border-radius: var(--radius-md);
+      font-size: 1.05rem; font-weight: 900; cursor: pointer; transition: all 0.2s ease; box-shadow: 0 6px 20px rgba(30, 58, 138, 0.25);
+      min-height: 52px;
+    }
+    .btn-cart-submit:hover { background: var(--brand-primary-hover); transform: translateY(-1px); }
+
+    .nav-bar-sticky-bottom {
+      position: fixed; bottom: 0; left: 0; width: 100%;
+      background: rgba(15, 23, 42, 0.98); backdrop-filter: blur(12px);
+      border-top: 1px solid rgba(255, 255, 255, 0.15); padding: 12px 16px; z-index: 150;
+      box-shadow: 0 -6px 25px rgba(0,0,0,0.35); cursor: pointer;
+    }
+    .nav-bottom-container { max-width: 900px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; width: 100%; }
+    .live-total-display { display: flex; flex-direction: column; color: white; }
+    .live-total-label { font-size: 0.65rem; color: #94a3b8; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px; }
+    .live-total-amount { font-size: 1.3rem; font-weight: 900; color: #34d399; }
+
+    .btn-nav-bottom.cart-btn-active {
+      background: var(--brand-accent); color: #ffffff; border: none; padding: 12px 22px; border-radius: var(--radius-md); font-weight: 900; font-size: 0.9rem; cursor: pointer; display: flex; align-items: center; gap: 8px; box-shadow: 0 4px 15px rgba(225, 29, 72, 0.3);
+      min-height: 44px;
+    }
+    .cart-badge-bottom { background: #0f172a; color: #ffffff; border-radius: 99px; padding: 3px 8px; font-size: 0.75rem; font-weight: 900; }
+
+    .cart-drawer {
+      position: fixed; top: 0; right: -100%; width: 100%; max-width: 420px; height: 100%;
+      background: white; z-index: 210; box-shadow: -10px 0 40px rgba(0,0,0,0.25); transition: right 0.3s ease; display: flex; flex-direction: column;
+    }
+    .cart-drawer.open { right: 0; }
+    .cart-header { background: var(--bg-dark); color: white; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; }
+    .cart-body { flex: 1; padding: 16px 20px; overflow-y: auto; }
+    .cart-footer { padding: 16px 20px; border-top: 1px solid #e2e8f0; background: #f8fafc; display: flex; flex-direction: column; gap: 10px; }
+
+    .shipping-calculator-box {
+      background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 8px; padding: 12px; display: flex; flex-direction: column; gap: 8px; width: 100%;
+    }
+    .btn-action-hub {
+      width: 100%; background: #0f172a; color: white; border: none; padding: 12px; border-radius: 8px; font-weight: 800; font-size: 0.9rem; cursor: pointer; transition: 0.2s;
+      min-height: 44px;
+    }
+    .btn-action-hub:hover { opacity: 0.9; }
+
+    .compact-shipping-options { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 6px; }
+    .compact-ship-btn {
+      background: white; border: 1.5px solid var(--border-light); border-radius: 8px; padding: 10px; font-size: 0.75rem; font-weight: 800; color: var(--bg-dark); cursor: pointer; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; transition: 0.2s;
+    }
+    .compact-ship-btn.active { border-color: var(--brand-primary); background: #eff6ff; color: var(--brand-primary); }
+    .compact-ship-btn .sub-english { font-size: 0.65rem; color: var(--text-muted); font-weight: 600; margin-top: 2px; }
+
+    .invoice-modal-overlay {
+      display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(15, 23, 42, 0.85); z-index: 600; justify-content: center; align-items: center; padding: 12px; backdrop-filter: blur(6px);
+    }
+    .invoice-modal-overlay.open { display: flex; }
+    .invoice-pdf-container {
+      background: white; width: 100%; max-width: 650px; max-height: 90vh; overflow-y: auto;
+      border-radius: 12px; padding: 24px; box-shadow: 0 25px 50px rgba(0,0,0,0.25); display: flex; flex-direction: column; gap: 16px; position: relative;
+    }
+    .invoice-header { display: flex; justify-content: space-between; align-items: flex-start; border-bottom: 2px solid #e2e8f0; padding-bottom: 16px; flex-wrap: wrap; gap: 10px; }
+    .invoice-title { font-size: 1.35rem; font-weight: 900; color: var(--brand-accent); text-transform: uppercase; letter-spacing: 0.5px; }
+    
+    .invoice-table { width: 100%; border-collapse: collapse; margin-top: 8px; }
+    .invoice-table th { background: #f1f5f9; color: var(--bg-dark); font-size: 0.75rem; font-weight: 800; text-transform: uppercase; padding: 10px; text-align: left; border-bottom: 2px solid #cbd5e1; }
+    .invoice-table td { padding: 12px 10px; font-size: 0.8rem; border-bottom: 1px solid #e2e8f0; color: var(--text-main); font-weight: 600; }
+
+    .invoice-footer-quote {
+      background: #fdf2f4; border-left: 4px solid var(--brand-accent); padding: 14px; border-radius: 0 8px 8px 0;
+      font-size: 0.78rem; color: #475569; font-style: italic; line-height: 1.5;
+    }
+
+    .account-modal-overlay {
+      display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(15, 23, 42, 0.8); z-index: 700; justify-content: center; align-items: center; padding: 16px; backdrop-filter: blur(4px);
+    }
+    .account-modal-overlay.open { display: flex; }
+    .account-modal-container {
+      background: white; width: 100%; max-width: 440px; border-radius: var(--radius-lg); padding: 28px; box-shadow: 0 20px 40px rgba(0,0,0,0.2); display: flex; flex-direction: column; gap: 16px; position: relative;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- MODAL DE MI CUENTA -->
+  <div class="account-modal-overlay" id="accountModal" onclick="closeAccountModal()">
+    <div class="account-modal-container" onclick="event.stopPropagation()">
+      <button style="position: absolute; top: 16px; right: 16px; background: #f1f5f9; border: none; width: 32px; height: 32px; border-radius: 50%; font-weight: 900; cursor: pointer; display: flex; align-items: center; justify-content: center;" onclick="closeAccountModal()">✕</button>
+      <div id="accountModalContent"></div>
+    </div>
+  </div>
+
+  <!-- MODAL DE FACTURA OFICIAL -->
+  <div class="invoice-modal-overlay" id="invoiceModal" onclick="closeInvoiceModal()">
+    <div class="invoice-pdf-container" onclick="event.stopPropagation()">
+      <button style="position: absolute; top: 14px; right: 14px; background: #f1f5f9; border: none; width: 36px; height: 36px; border-radius: 50%; font-weight: 900; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 1rem;" onclick="closeInvoiceModal()">✕</button>
+      
+      <div class="invoice-header">
+        <div>
+          <svg style="height: 45px; width: auto; margin-bottom: 6px;" viewBox="0 0 200 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20 90 L60 20 L110 20 C130 20 145 30 135 50 C125 70 100 70 80 70 L120 90 Z" fill="#e11d48"/>
+            <path d="M100 90 L140 20 L180 20 L140 90 Z" fill="#1e3a8a"/>
+          </svg>
+          <div style="font-size: 0.65rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px;">DISEÑO • ESTAMPADO • PERSONALIZADO</div>
+        </div>
+        <div style="text-align: right;">
+          <div class="invoice-title" id="invHeaderTitle">Factura de Compra</div>
+          <div id="invDate" style="font-size: 0.75rem; font-weight: 700; color: var(--text-muted); margin-top: 4px;">Fecha: 19 de Agosto, 2026</div>
+          <div id="invFolio" style="font-size: 0.72rem; font-weight: 800; color: var(--brand-primary); margin-top: 2px;">Folio: RAX-0000</div>
+        </div>
+      </div>
+
+      <div style="display:flex; justify-content:space-between; font-size:0.8rem; background:#f8fafc; padding:10px 14px; border-radius:8px; border:1px solid #e2e8f0; flex-wrap:wrap; gap:8px;">
+        <div>
+          <strong style="color:var(--bg-dark);">Facturado a:</strong><br>
+          <span id="invClientName">Carlos Mendoza</span><br>
+          <span id="invClientCompany" style="color:var(--text-muted);">Mendoza Landscaping</span>
+        </div>
+        <div style="text-align: right;">
+          <strong style="color:var(--bg-dark);">Dirección de Envío / Destino:</strong><br>
+          <span id="invClientAddress" style="color:var(--text-secondary); font-weight:700;">Dirección no especificada</span><br>
+          <span id="invClientContactPhone" style="font-size:0.75rem; color:var(--text-muted);">(555) 342-8910</span>
+        </div>
+      </div>
+
+      <div style="overflow-x: auto;">
+        <table class="invoice-table">
+          <thead>
+            <tr>
+              <th>Descripción / Especificaciones</th>
+              <th style="text-align: center;">Cantidad</th>
+              <th style="text-align: right;">Precio Unitario</th>
+              <th style="text-align: right;">Precio Total</th>
+            </tr>
+          </thead>
+          <tbody id="invoiceTableBody"></tbody>
+        </table>
+      </div>
+
+      <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:8px; padding:10px; display:flex; flex-direction:column; gap:4px; font-size:0.78rem;">
+        <div style="display:flex; justify-content:space-between;"><span>Subtotal Productos:</span> <strong id="invSubtotalText">$0.00</strong></div>
+        <div style="display:flex; justify-content:space-between;"><span>Método de Entrega:</span> <strong id="invShippingText" style="color:var(--brand-primary);">$0.00</strong></div>
+        <div style="display:flex; justify-content:space-between; font-size:0.9rem; font-weight:900; color:var(--brand-primary); border-top:1px solid #cbd5e1; padding-top:6px; margin-top:4px;">
+          <span>Gran Total (Impuestos Incluidos):</span> <span id="invGrandTotalText">$0.00</span>
+        </div>
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:4px; font-size:0.72rem; color:var(--text-muted);">
+        <div><strong>Términos de Pago:</strong> Pagado en su totalidad. Producción iniciada de inmediato.</div>
+        <div><strong>Referencia del Pedido:</strong> <span id="invTrackingNum" style="color:var(--brand-primary); font-weight:800;">TRK-000000000</span></div>
+      </div>
+
+      <div class="invoice-footer-quote">
+        En RAX Creations nos enorgullecemos de la precisión y calidad. Estamos comprometidos a entregar productos excepcionales que eleven tu marca. Gracias por confiar en nosotros para tu proyecto; esperamos superar tus expectativas.
+      </div>
+
+      <div style="display: flex; gap: 8px; margin-top: 4px; flex-wrap: wrap;">
+        <button type="button" class="btn-action-hub" style="background: var(--brand-primary); margin-top:0; flex:1;" onclick="window.print()">🖨️ Imprimir Factura</button>
+        <button type="button" class="btn-action-hub" style="background: var(--bg-dark); margin-top:0; flex:1;" onclick="closeInvoiceModal()">Cerrar Ventana</button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- TOP HEADER -->
+  <div class="brand-top-header">
+    <div class="brand-header-inner">
+      <a href="#" class="brand-logo-container">
+        <svg class="logo-svg" viewBox="0 0 200 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20 90 L60 20 L110 20 C130 20 145 30 135 50 C125 70 100 70 80 70 L120 90 Z" fill="#1e3a8a" stroke="#ffffff" stroke-width="2"/>
+          <path d="M100 90 L140 20 L180 20 L140 90 Z" fill="#1e3a8a"/>
+          <path d="M140 20 L180 20 L140 90 Z" fill="#ffffff" opacity="0.4"/>
+        </svg>
+        <div class="brand-titles">
+          <div class="brand-name">RAX <span>CREATIONS</span></div>
+          <div class="brand-subline">Wholesale Apparel & Print USA</div>
+        </div>
+      </a>
+
+      <div class="header-right-panel">
+        <div class="location-badge">
+          🇺🇸 Envíos a todo USA
+        </div>
+        <button class="account-link-btn" type="button" onclick="openAccountModal()">
+          👤 <span id="accountBtnLabel">Mi cuenta</span>
+        </button>
+        <div style="display:flex; align-items:center; gap:5px; background:rgba(255,255,255,0.06); padding:5px 12px; border-radius:99px; color:#cbd5e1; font-size:0.72rem; font-weight:800;">
+          <span class="status-dot"></span> Taller Activo
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BANNER CTA DE PROMOCIÓN -->
+  <a class="promo-banner-cta" href="#" onclick="switchProduct('cards'); return false;">
+    <span>💳 Tarjetas de Presentación a partir de $39.99 con Envío Gratis incluido ➔ ¡Haz clic aquí!</span>
+  </a>
+
+  <!-- HERO SECTION -->
+  <div class="hero-welcome-section">
+    <div class="hero-welcome-container">
+      <h1 class="hero-title">Estampado y Productos Impresos de Alta Durabilidad</h1>
+      <p class="hero-subtitle">En <strong>RAX Creations</strong> creamos tus camisetas personalizadas, tarjetas de presentación y stickers con acabados de primera. Te enviamos una imagen de muestra para aprobación antes de imprimir. ¡Enviamos a todo USA!</p>
+    </div>
+  </div>
+
+  <div class="container">
+    
+    <!-- SELECTOR DE PRODUCTOS -->
+    <div class="product-dropdown-container">
+      <label for="productSelectDropdown">
+        <span>👇 Elige tu producto para comenzar a configurar:</span>
+      </label>
+      <select id="productSelectDropdown" class="product-select-dropdown" onchange="switchProduct(this.value)">
+        <option value="cards">1. Tarjetas de Presentación</option>
+        <option value="shirt_corp" selected>2. Camiseta para Compañía (Pecho y Espalda)</option>
+        <option value="stickers">3. Stickers Impresos Personalizados</option>
+        <option value="shirt_reg">4. Camiseta con Diseño Libre</option>
+        <option value="caps">5. Gorras Personalizadas</option>
+        <option value="sport">6. Uniformes Deportivos</option>
+        <option value="shirt_house">7. Camisetas Originales RAX</option>
+        <option value="commercial_hub">8. Rotulación y Vinil de Corte</option>
+      </select>
+    </div>
+
+    <!-- TARJETA UNIFICADA -->
+    <div class="unified-card">
+      <form id="productForm" onsubmit="handleAddToCart(event)">
+
+        <!-- 1. ARCHIVOS Y DISEÑOS -->
+        <div>
+          <div class="section-header-title">1. Archivos y Diseños del Pedido</div>
+          <div id="uploadContainerDynamic"></div>
+          <div style="margin-top: 6px; font-size: 0.75rem; color: #047857; font-weight: 700;">
+            Garantía RAX: Te enviaremos una imagen de muestra de tu diseño para aprobación antes de imprimir o estampar.
+          </div>
+        </div>
+
+        <div class="divider-line"></div>
+
+        <!-- 2. CANTIDAD Y CONFIGURACIÓN -->
+        <div>
+          <div class="section-header-title">2. Cantidad y Configuración del Producto</div>
+          <div id="dynamicOptionsArea"></div>
+        </div>
+
+        <div style="margin-top: 14px;">
+          <div class="section-header-title">Notas o Instrucciones Especiales (Opcional)</div>
+          <textarea id="custNotes" class="form-control" style="height:65px;" placeholder="Ubicación del logo, colores, instrucciones..."></textarea>
+        </div>
+
+        <!-- CAJA DE CUPÓN MODERNA -->
+        <div class="coupon-section-modern" style="margin-top: 16px;">
+          <div style="font-size:0.78rem; font-weight:800; color:var(--brand-primary);">¿Tienes un código de cupón?</div>
+          <div style="display:flex; gap:6px;">
+            <input type="text" id="promoCodeInput" class="form-control" placeholder="Introduce tu código..." style="padding:8px 10px; font-size:0.8rem; background:white; min-height:38px;" value="">
+            <button type="button" class="btn-action-hub" style="background:var(--brand-primary); width:110px; font-size:0.78rem; padding:8px; min-height:38px;" onclick="applyTshirtPromoCode()">Aplicar</button>
+          </div>
+          <div style="font-size:0.7rem; color:#64748b; font-weight:700;" id="promoFeedbackMsg">
+            Ingresa el código proporcionado por nuestro equipo.
+          </div>
+        </div>
+
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-top: 14px; background: #eff6ff; padding: 14px 18px; border-radius: var(--radius-md); border: 1.5px solid #bfdbfe; flex-wrap:wrap; gap:10px;">
+          <span style="font-weight:900; font-size:1rem; color: var(--bg-dark);">Precio Total:</span>
+          <span id="priceDisplay" style="font-size:1.45rem; font-weight:900; color:var(--brand-primary);">$24.99</span>
+        </div>
+
+        <button type="submit" class="btn-cart-submit" style="margin-top: 16px;">AGREGAR AL CARRITO</button>
+
+      </form>
+    </div>
+  </div>
+
+  <!-- BARRA INFERIOR -->
+  <div class="nav-bar-sticky-bottom" onclick="toggleCartDrawer()">
+    <div class="nav-bottom-container">
+      <div class="live-total-display">
+        <span class="live-total-label">Total Carrito Acumulado:</span>
+        <span class="live-total-amount" id="liveTotalAmount">$0.00</span>
+      </div>
+      <button class="btn-nav-bottom cart-btn-active" type="button">
+        Ver Carrito <span class="cart-badge-bottom" id="cartBadgeCountBottom">0</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- CART DRAWER -->
+  <div class="cart-drawer" id="cartDrawer" onclick="event.stopPropagation()">
+    <div class="cart-header">
+      <strong style="font-size:1.05rem; font-weight:900;" id="cartDrawerTitle">Tu Carrito de Pedido</strong>
+      <button onclick="toggleCartDrawer()" style="background:none; border:none; color:white; font-size:1.3rem; cursor:pointer; padding:4px;">✕</button>
+    </div>
+    
+    <!-- VISTA 1: LISTA DE ITEMS -->
+    <div class="cart-body" id="cartBodyItemsView">
+      <div id="cartItemsContainer"></div>
+    </div>
+
+    <!-- VISTA 2: CHECKOUT -->
+    <div class="cart-body" id="cartBodyCheckoutView" style="display: none;">
+      <div class="shipping-calculator-box" style="background:#f8fafc; border:1.5px solid var(--border-light);">
+        <button type="button" onclick="backToCartItemsView()" style="background:none; border:none; color:var(--brand-primary); font-size:0.75rem; font-weight:800; cursor:pointer; margin-bottom:6px; display:inline-flex; align-items:center; gap:4px;">← Volver al carrito</button>
+        
+        <strong style="font-size:0.82rem; color:var(--brand-primary); margin-bottom:6px; display:block;">📦 Datos de Contacto y Envío:</strong>
+        
+        <div id="checkoutContactFormArea" style="display:flex; flex-direction:column; gap:8px; margin-bottom:10px;">
+          <input type="text" id="custName" class="form-control" placeholder="Nombre completo *" style="padding:9px 12px; font-size:0.82rem; min-height:40px;">
+          <input type="tel" id="custPhone" class="form-control" placeholder="Número de teléfono *" style="padding:9px 12px; font-size:0.82rem; min-height:40px;">
+          <input type="email" id="custEmail" class="form-control" placeholder="Correo electrónico *" style="padding:9px 12px; font-size:0.82rem; min-height:40px;">
+          
+          <!-- DIRECCIÓN POSTAL COMPLETA -->
+          <input type="text" id="custStreetAddress" class="form-control" placeholder="Dirección postal (Calle y número) *" style="padding:9px 12px; font-size:0.82rem; min-height:40px;">
+          <div style="display:grid; grid-template-columns: 1fr 1fr; gap:6px;">
+            <input type="text" id="custCity" class="form-control" placeholder="Ciudad *" style="padding:9px 12px; font-size:0.82rem; min-height:40px;">
+            <input type="text" id="custState" class="form-control" placeholder="Estado (ej. TX, NM) *" style="padding:9px 12px; font-size:0.82rem; min-height:40px;">
+          </div>
+        </div>
+        <div id="loggedInUserInfoNotice" style="display:none; font-size:0.78rem; color:#166534; background:#f0fdf4; padding:10px; border-radius:6px; margin-bottom:8px; font-weight:700;"></div>
+
+        <!-- OPCIONES DE ENTREGA / ENVÍO -->
+        <strong style="font-size:0.78rem; color:#1e3a8a; margin-top:4px; display:block;">Opciones de Entrega / Envío:</strong>
+        <div class="compact-shipping-options" style="margin-top:6px;">
+          <button type="button" class="compact-ship-btn active" id="btnShipNational" onclick="setShippingMode('national')">
+            <span>📦 ENVÍO</span>
+            <span class="sub-english">A todo EE. UU. ($8.99)</span>
+          </button>
+          <button type="button" class="compact-ship-btn" id="btnShipLocal" onclick="setShippingMode('local')">
+            <span>📍 ENTREGA EN TU ZONA</span>
+            <span class="sub-english">El Paso y alrededores</span>
+          </button>
+        </div>
+
+        <div style="margin-top:10px;">
+          <input type="text" id="cartZipCode" class="form-control" placeholder="ZIP Code destino (ej. 88063, 79901)" maxlength="5" oninput="checkZipCodeFreeDelivery(this.value)" style="padding:9px 12px; font-size:0.82rem; margin-bottom:4px; min-height:40px;">
+          <div id="zipCodeNoticeMsg" style="font-size:0.72rem; font-weight:700; color:#166534; margin-top:2px;"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER DEL CARRITO -->
+    <div class="cart-footer" id="cartFooterView">
+      
+      <!-- WIDGET DE PROGRESO DE ENVÍO GRATIS -->
+      <div class="free-shipping-progress-box" id="freeShippingWidgetBox">
+        <div class="fsp-header">
+          <span>🚚 Envío Gratis en Órdenes de $75+</span>
+          <span id="fspProgressText">$0 / $75</span>
+        </div>
+        <div class="fsp-bar-bg">
+          <div class="fsp-bar-fill" id="fspBarFill"></div>
+        </div>
+        <div class="fsp-msg" id="fspStatusMsg">¡Agrega más productos para desbloquear tu envío sin costo!</div>
+      </div>
+
+      <div style="display:flex; justify-content:space-between; font-weight:900; font-size:1.05rem; margin-top:2px;">
+        <span>Total General a Pagar:</span>
+        <span id="cartTotalDisplay" style="color:var(--brand-primary);">$0.00</span>
+      </div>
+
+      <!-- BOTONES DE CHECKOUT Y PAGO -->
+      <button id="btnProceedCheckout" onclick="proceedToCheckoutView()" class="btn-action-hub" style="background:var(--brand-primary);">Proceder al Checkout (Datos de Envío y Pago)</button>
+      <button id="btnFinalPay" onclick="finalizeAndSendOrder()" class="btn-action-hub" style="background:var(--brand-accent); display:none;">Confirmar Pedido y Generar Nota de Compra</button>
+      
+      <button onclick="openInvoiceModal(true)" class="btn-action-hub" style="background:#475569; margin-top:2px; font-size:0.75rem;">Ver Muestra de Nota de Compra (Admin)</button>
+    </div>
+  </div>
+
+  <script>
+    let activeProdKey = 'shirt_corp';
+    let selectedPrice = 24.99;
+    let selectedTierIndex = 0;
+    let cardSides = 'Single-Sided';
+    let promoCodeApplied = false;
+    let tshirtCouponActive = false;
+    let shirtQty = 1;
+    let shippingCost = 0.00;
+    let shippingMethodName = "Envío por paquetería a cualquier parte de EE. UU. ($8.99)";
+    let generatedFolio = '';
+    let generatedTrackingNumber = '';
+
+    let currentCustomer = JSON.parse(localStorage.getItem('rax_customer') || 'null');
+    let customerOrders = JSON.parse(localStorage.getItem('rax_customer_orders') || '[]');
+    let cart = JSON.parse(localStorage.getItem('rax_cart') || '[]');
+
+    const productCatalog = {
+      shirt_corp: {
+        title: "Camiseta para Compañía",
+        basePrice: 24.99,
+        weightLbs: 0.35,
+        colors: [
+          { name: "Negro", hex: "#18181b" },
+          { name: "Blanco", hex: "#ffffff" },
+          { name: "Gris", hex: "#64748b" },
+          { name: "Azul Marino", hex: "#0f172a" },
+          { name: "Rojo", hex: "#dc2626" }
+        ],
+        fabrics: ["Algodón", "Poliéster Dri-Fit"],
+        collars: ["Cuello Redondo", "Cuello Polo (Botones)"]
+      },
+      cards: {
+        title: "Tarjetas de Presentación",
+        basePrice: 69.99,
+        weightLbs: 0.40,
+        tiers: [
+          { qty: 100, single: 39.99, double: 44.99, promoSingle: 29.99, promoDouble: 39.99 },
+          { qty: 250, single: 69.99, double: 79.99, popular: true },
+          { qty: 500, single: 119.99, double: 139.99 },
+          { qty: 1000, single: 179.99, double: 219.99 }
+        ]
+      },
+      stickers: {
+        title: "Stickers Impresos Personalizados",
+        basePrice: 29.99,
+        weightLbs: 0.25,
+        subtypes: {
+          white: {
+            name: "Sticker Personalizado Blanco (Glossy)",
+            tiers: [
+              { label: "50 Stickers Blancos", price: 29.99, qty: 50 },
+              { label: "100 Stickers Blancos", price: 49.99, qty: 100 },
+              { label: "250 Stickers Blancos", price: 95.00, qty: 250 },
+              { label: "500 Stickers Blancos", price: 175.00, qty: 500 }
+            ]
+          },
+          holo: {
+            name: "Sticker Personalizado Holográfico",
+            tiers: [
+              { label: "50 Stickers Holográficos", price: 38.00, qty: 50 },
+              { label: "100 Stickers Holográficos", price: 65.00, qty: 100 },
+              { label: "250 Stickers Holográficos", price: 125.00, qty: 250 },
+              { label: "500 Stickers Holográficos", price: 230.00, qty: 500 }
+            ]
+          }
+        }
+      },
+      shirt_reg: {
+        title: "Camiseta con Diseño Libre",
+        basePrice: 24.99,
+        weightLbs: 0.35,
+        colors: [
+          { name: "Negro", hex: "#18181b" },
+          { name: "Blanco", hex: "#ffffff" },
+          { name: "Gris", hex: "#64748b" },
+          { name: "Azul Marino", hex: "#0f172a" },
+          { name: "Rojo", hex: "#dc2626" }
+        ],
+        fabrics: ["Algodón", "Poliéster Dri-Fit"],
+        collars: ["Cuello Redondo", "Cuello Polo (Botones)"]
+      },
+      caps: {
+        title: "Gorras Personalizadas",
+        basePrice: 24.99,
+        weightLbs: 0.30,
+        colors: [
+          { name: "Negro Total", hex: "#18181b" },
+          { name: "Negro con Malla Blanca", hex: "#18181b" },
+          { name: "Azul Marino", hex: "#0f172a" },
+          { name: "Gris Carbón", hex: "#374151" }
+        ]
+      },
+      sport: {
+        title: "Uniformes Deportivos",
+        basePrice: 24.99,
+        weightLbs: 0.30,
+        colors: [
+          { name: "Naranja / Negro", hex: "#f97316" },
+          { name: "Azul / Blanco", hex: "#2563eb" },
+          { name: "Rojo / Blanco", hex: "#dc2626" },
+          { name: "Negro Total", hex: "#18181b" },
+          { name: "Blanco Total", hex: "#ffffff" }
+        ],
+        fabrics: ["Poliéster Dri-Fit"],
+        collars: ["Cuello Redondo", "Cuello en V (V-Neck)"]
+      },
+      shirt_house: {
+        title: "Camisetas Originales RAX",
+        basePrice: 24.99,
+        weightLbs: 0.35,
+        houseDesigns: [
+          { name: "Cyberpunk Tiger 2026", desc: "Diseño urbano estelar de edición limitada." },
+          { name: "Minimalist Wave Pro", desc: "Líneas abstractas con alta definición." },
+          { name: "Orgullo Mexicano - Águila", desc: "Arte conmemorativo patriótico." },
+          { name: "Family Reunion Vintage", desc: "Ideal para eventos y reencuentros." },
+          { name: "Sunset Horizon", desc: "Inspirado en los atardeceres de la región." },
+          { name: "Classic Original", desc: "Estilo icónico de la región." }
+        ]
+      },
+      commercial_hub: {
+        title: "Rotulación y Vinil de Corte",
+        weightLbs: 0.50,
+        subProducts: {
+          fleet_kit: {
+            name: "1. Kit de Flotilla (Work Truck Branding)",
+            desc: "2 Logos laterales para puertas + 1 calcomanía grande para vidrio trasero.",
+            sizes: [
+              { name: "Small (Puertas Sedán)", price: 65.00 },
+              { name: "Medium (Pick-ups Estándar)", price: 95.00 },
+              { name: "Large (Ancho Completo 22\")", price: 145.00 }
+            ]
+          },
+          instagram_kit: {
+            name: "2. Kit de Redes Sociales e Instagram",
+            desc: "Calcomanías con tu @handle y logotipo para parabrisas o caja de camioneta.",
+            sizes: [
+              { name: "Small (6\" Ancho)", price: 15.00 },
+              { name: "Medium (12\" Ancho)", price: 25.00 },
+              { name: "Large (22\" Ancho - Máx Plotter)", price: 42.00 }
+            ]
+          },
+          entry_kit: {
+            name: "3. Kit de Puerta y Horarios Comerciales",
+            desc: "Incluye nombre del negocio, horario de atención y redes sociales con opción de corte espejo.",
+            sizes: [
+              { name: "Small (Kit Ventana Básico)", price: 55.00 },
+              { name: "Medium (Kit Ventana Estándar)", price: 85.00 },
+              { name: "Large (Kit Puerta Doble)", price: 120.00 }
+            ]
+          },
+          compliance_kit: {
+            name: "4. Stickers de Seguridad & Best Sellers",
+            desc: "Leyendas de alta rotación (Privado, No Bloquear Entrada, Cuidado con el Perro).",
+            sizes: [
+              { name: "Pack 3 Piezas (Esencial)", price: 35.00 },
+              { name: "Pack 6 Piezas (Comercial Mixto)", price: 60.00 },
+              { name: "Pack 12 Piezas (Flotilla / Negocios)", price: 110.00 }
+            ]
+          }
+        }
+      }
+    };
+
+    window.onload = function() {
+      switchProduct(activeProdKey);
+      updateCartBadge();
+      updateAccumulatedLiveTotal();
+      updateAccountButtonLabel();
+      checkCustomerSessionForCheckout();
+    };
+
+    function checkCustomerSessionForCheckout() {
+      const formArea = document.getElementById('checkoutContactFormArea');
+      const noticeArea = document.getElementById('loggedInUserInfoNotice');
+
+      if (currentCustomer && currentCustomer.name && currentCustomer.email) {
+        formArea.style.display = 'none';
+        noticeArea.style.display = 'block';
+        noticeArea.innerHTML = `✓ Sesión activa: <strong>${currentCustomer.name}</strong> (${currentCustomer.email}). <a href="#" onclick="openAccountModal(); return false;" style="color:#166534; text-decoration:underline; font-weight:800;">Editar datos</a>`;
+      } else {
+        formArea.style.display = 'flex';
+        noticeArea.style.display = 'none';
+      }
+    }
+
+    function updateAccountButtonLabel() {
+      const lbl = document.getElementById('accountBtnLabel');
+      if (currentCustomer) {
+        lbl.innerText = currentCustomer.name.split(' ')[0];
+      } else {
+        lbl.innerText = "Mi cuenta";
+      }
+    }
+
+    function openAccountModal(view = 'login') {
+      const modal = document.getElementById('accountModal');
+      const content = document.getElementById('accountModalContent');
+      modal.classList.add('open');
+
+      if (currentCustomer) {
+        let ordersHtml = customerOrders.length === 0 ? `<p style="font-size:0.8rem; color:var(--text-muted);">No tienes pedidos registrados aún.</p>` :
+          customerOrders.map(o => `
+            <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:8px; padding:10px; margin-bottom:8px; font-size:0.78rem;">
+              <div style="display:flex; justify-content:space-between; font-weight:900;"><span>${o.folio}</span> <span style="color:#166534;">${o.status}</span></div>
+              <div style="color:var(--text-muted); margin-top:2px;">Fecha: ${o.date} | Total: $${o.total}</div>
+              <div style="color:var(--brand-primary); font-weight:700; margin-top:4px;">${o.itemsSummary}</div>
+            </div>
+          `).join('');
+
+        content.innerHTML = `
+          <div style="text-align:center; margin-bottom:10px;">
+            <div style="font-size:1.2rem; font-weight:900; color:var(--brand-primary);">¡Hola, ${currentCustomer.name}!</div>
+            <div style="font-size:0.75rem; color:var(--text-muted);">${currentCustomer.email}</div>
+          </div>
+          <div class="section-header-title" style="font-size:0.85rem; border-top:1px solid #e2e8f0; padding-top:12px;">Mis Pedidos Recientes</div>
+          <div style="max-height:200px; overflow-y:auto; margin-bottom:12px;">${ordersHtml}</div>
+          
+          <div class="section-header-title" style="font-size:0.85rem; border-top:1px solid #e2e8f0; padding-top:12px;">Dirección de Envío Principal</div>
+          <div style="font-size:0.78rem; color:var(--text-muted); background:#f8fafc; padding:8px; border-radius:6px; margin-bottom:12px;">
+            ${currentCustomer.address || 'EE. UU. (Predeterminada)'}
+          </div>
+
+          <button type="button" class="btn-action-hub" style="background:#e11d48;" onclick="customerLogout()">Cerrar Sesión</button>
+        `;
+      } else if (view === 'register') {
+        content.innerHTML = `
+          <div style="font-size:1.1rem; font-weight:900; color:var(--bg-dark); text-align:center; margin-bottom:6px;">Crear una Cuenta</div>
+          <p style="font-size:0.75rem; color:var(--text-muted); text-align:center; margin-bottom:14px;">Accede a tu historial de pedidos y seguimiento.</p>
+          <form onsubmit="handleCustomerRegister(event)" style="display:flex; flex-direction:column; gap:10px;">
+            <input type="text" id="regName" class="form-control" placeholder="Nombre completo *" required>
+            <input type="email" id="regEmail" class="form-control" placeholder="Correo electrónico *" required>
+            <input type="tel" id="regPhone" class="form-control" placeholder="Teléfono *" required>
+            <input type="password" id="regPass" class="form-control" placeholder="Contraseña *" required>
+            <button type="submit" class="btn-action-hub" style="background:var(--brand-primary); margin-top:4px;">Registrarse</button>
+          </form>
+          <div style="text-align:center; margin-top:10px; font-size:0.75rem;">
+            <a href="#" onclick="openAccountModal('login'); return false;" style="color:var(--brand-primary); font-weight:800; text-decoration:none;">¿Ya tienes cuenta? Inicia sesión</a>
+          </div>
+        `;
+      } else if (view === 'recover') {
+        content.innerHTML = `
+          <div style="font-size:1.1rem; font-weight:900; color:var(--bg-dark); text-align:center; margin-bottom:6px;">Recuperar Contraseña</div>
+          <p style="font-size:0.75rem; color:var(--text-muted); text-align:center; margin-bottom:14px;">Te enviaremos un enlace de recuperación a tu correo.</p>
+          <form onsubmit="handleCustomerRecover(event)" style="display:flex; flex-direction:column; gap:10px;">
+            <input type="email" id="recEmail" class="form-control" placeholder="Correo electrónico *" required>
+            <button type="submit" class="btn-action-hub" style="background:var(--brand-primary); margin-top:4px;">Enviar Enlace</button>
+          </form>
+          <div style="text-align:center; margin-top:10px; font-size:0.75rem;">
+            <a href="#" onclick="openAccountModal('login'); return false;" style="color:var(--brand-primary); font-weight:800; text-decoration:none;">← Volver al inicio de sesión</a>
+          </div>
+        `;
+      } else {
+        content.innerHTML = `
+          <div style="font-size:1.1rem; font-weight:900; color:var(--bg-dark); text-align:center; margin-bottom:6px;">Iniciar Sesión</div>
+          <p style="font-size:0.75rem; color:var(--text-muted); text-align:center; margin-bottom:14px;">Ingresa para consultar tus pedidos y direcciones.</p>
+          <form onsubmit="handleCustomerLogin(event)" style="display:flex; flex-direction:column; gap:10px;">
+            <input type="email" id="loginEmail" class="form-control" placeholder="Correo electrónico *" required>
+            <input type="password" id="loginPass" class="form-control" placeholder="Contraseña *" required>
+            <div style="text-align:right;">
+              <a href="#" onclick="openAccountModal('recover'); return false;" style="font-size:0.7rem; color:var(--text-muted); text-decoration:none;">¿Olvidaste tu contraseña?</a>
+            </div>
+            <button type="submit" class="btn-action-hub" style="background:var(--brand-primary); margin-top:2px;">Iniciar Sesión</button>
+          </form>
+          <div style="text-align:center; margin-top:10px; font-size:0.75rem;">
+            <a href="#" onclick="openAccountModal('register'); return false;" style="color:var(--brand-primary); font-weight:800; text-decoration:none;">¿No tienes cuenta? Regístrate aquí</a>
+          </div>
+        `;
+      }
+    }
+
+    function closeAccountModal() {
+      document.getElementById('accountModal').classList.remove('open');
+    }
+
+    function handleCustomerRegister(e) {
+      e.preventDefault();
+      const name = document.getElementById('regName').value.trim();
+      const email = document.getElementById('regEmail').value.trim();
+      const phone = document.getElementById('regPhone').value.trim();
+      currentCustomer = { name, email, phone, address: "EE. UU. (Dirección predeterminada)" };
+      localStorage.setItem('rax_customer', JSON.stringify(currentCustomer));
+      updateAccountButtonLabel();
+      checkCustomerSessionForCheckout();
+      closeAccountModal();
+      alert(`¡Bienvenido a RAX Creations, ${name}! Cuenta creada con éxito.`);
+    }
+
+    function handleCustomerLogin(e) {
+      e.preventDefault();
+      const email = document.getElementById('loginEmail').value.trim();
+      currentCustomer = { name: email.split('@')[0], email, phone: "(555) 000-0000", address: "EE. UU. (Dirección predeterminada)" };
+      localStorage.setItem('rax_customer', JSON.stringify(currentCustomer));
+      updateAccountButtonLabel();
+      checkCustomerSessionForCheckout();
+      closeAccountModal();
+      alert("¡Sesión iniciada correctamente!");
+    }
+
+    function handleCustomerRecover(e) {
+      e.preventDefault();
+      alert("Se han enviado las instrucciones de recuperación a tu correo electrónico.");
+      openAccountModal('login');
+    }
+
+    function customerLogout() {
+      currentCustomer = null;
+      localStorage.removeItem('rax_customer');
+      updateAccountButtonLabel();
+      checkCustomerSessionForCheckout();
+      closeAccountModal();
+      alert("Has cerrado sesión correctamente.");
+    }
+
+    function switchProduct(key) {
+      activeProdKey = key;
+      selectedTierIndex = 0;
+      promoCodeApplied = false;
+      tshirtCouponActive = false;
+      shirtQty = (key === 'stickers') ? 50 : 1;
+
+      const dropdown = document.getElementById('productSelectDropdown');
+      if(dropdown) dropdown.value = key;
+
+      const prod = productCatalog[key];
+      if (key === 'stickers') { selectedPrice = prod.subtypes.white.tiers[0].price; }
+      else if (key === 'cards') { selectedPrice = prod.tiers[1].single; selectedTierIndex = 1; cardSides = 'Single-Sided'; }
+      else if (key === 'commercial_hub') { selectedPrice = prod.subtypes.fleet_kit.sizes[0].price; }
+      else if (prod.sizes) { selectedPrice = prod.sizes[0].price; }
+      else if (key === 'shirt_corp' || key === 'shirt_reg' || key === 'sport' || key === 'shirt_house') {
+        selectedPrice = calculateShirtUnitPrice(shirtQty) * shirtQty;
+      } else { selectedPrice = prod.basePrice; }
+
+      renderUploadSection(key);
+      renderDynamicFields(key);
+
+      const cardEl = document.getElementById('productForm');
+      if (cardEl) {
+        cardEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+
+    function renderUploadSection(key) {
+      const container = document.getElementById('uploadContainerDynamic');
+      let html = '';
+
+      if (key === 'cards') {
+        html = `
+          <div class="upload-box-simple"><label>Subir Diseño Frente *</label><input type="file" id="cardFrontFile" accept="image/*,application/pdf" required></div>
+          <div class="upload-box-simple" style="margin-top:6px;"><label>Subir Diseño Reverso (Opcional - Requerido si es Double-Sided)</label><input type="file" id="cardBackFile" accept="image/*,application/pdf"></div>
+        `;
+      } else if (key === 'commercial_hub') {
+        html = `
+          <div class="upload-box-simple">
+            <label style="font-size:0.82rem; font-weight:900;">Subir Logotipo del Negocio o Arte Vectorial (Opcional) *</label>
+            <input type="file" id="commercialLogoFile" accept="image/*,application/pdf">
+          </div>
+        `;
+      } else if (key === 'stickers') {
+        html = `
+          <div class="upload-box-simple">
+            <label style="font-size:0.82rem; font-weight:900;">Subir Archivo de Diseño para Sticker *</label>
+            <input type="file" id="stickerFile" accept="image/*,application/pdf">
+          </div>
+        `;
+      } else {
+        html = `
+          <div class="upload-zone-modern">
+            <div style="font-size:1.6rem; margin-bottom:4px;">📁</div>
+            <div style="font-weight:900; font-size:0.85rem; color:var(--brand-primary);">Toca aquí para subir tu diseño o logo *</div>
+            <input type="file" id="mainUploadFile" accept="image/*,application/pdf">
+          </div>
+        `;
+      }
+      container.innerHTML = html;
+    }
+
+    function renderDynamicFields(key) {
+      const prod = productCatalog[key];
+      const area = document.getElementById('dynamicOptionsArea');
+      let html = '';
+
+      if (key === 'cards') {
+        html = `
+          <div style="margin-bottom:14px;">
+            <div style="font-size:0.85rem; font-weight:900; margin-bottom:6px; color:var(--bg-dark);">Tipo de Impresión (Printing):</div>
+            <div class="options-grid" style="margin-bottom:14px;">
+              <div class="card-option ${cardSides === 'Single-Sided' ? 'selected' : ''}" onclick="selectCardSides('Single-Sided', this)">
+                <span class="opt-title">Single-Sided</span>
+                <span style="font-size:0.7rem; color:var(--text-muted);">Frente</span>
+              </div>
+              <div class="card-option ${cardSides === 'Double-Sided' ? 'selected' : ''}" onclick="selectCardSides('Double-Sided', this)">
+                <span class="opt-title">Double-Sided</span>
+                <span style="font-size:0.7rem; color:var(--text-muted);">Frente y reverso</span>
+              </div>
+            </div>
+
+            <div style="font-size:0.85rem; font-weight:900; margin-bottom:6px; color:var(--bg-dark);">Cantidad (Quantity):</div>
+            <div class="options-grid">
+              ${prod.tiers.map((t, i) => {
+                let price = cardSides === 'Single-Sided' ? t.single : t.double;
+                if (i === 0 && promoCodeApplied) {
+                  price = cardSides === 'Single-Sided' ? t.promoSingle : t.promoDouble;
+                }
+                const isSelected = i === selectedTierIndex;
+                return `
+                  <div class="card-option ${isSelected ? 'selected' : ''}" onclick="selectCardTier(${i}, ${price}, this)">
+                    ${t.popular ? '<span class="badge-most-popular">Most Popular</span>' : ''}
+                    <span class="opt-title">${t.qty.toLocaleString()} Tarjetas</span>
+                    <span class="opt-price">$${price.toFixed(2)}</span>
+                    ${i === 0 && promoCodeApplied ? '<span class="opt-sublabel" style="background:#047857; color:white;">✓ Cupón Activo</span>' : ''}
+                  </div>
+                `;
+              }).join('')}
+            </div>
+          </div>
+        `;
+      } else if (key === 'stickers') {
+        html = `
+          <div style="margin-bottom:14px;">
+            <div style="font-size:0.85rem; font-weight:900; margin-bottom:6px; color:var(--bg-dark);">Tipo de Acabado (Finish):</div>
+            <div class="options-grid" style="margin-bottom:14px;">
+              <div class="card-option selected" id="stkWhiteOpt" onclick="selectStickerType('white', this)">
+                <span class="opt-title">Blanco Glossy</span>
+                <span class="opt-price">Desde $29.99</span>
+              </div>
+              <div class="card-option" id="stkHoloOpt" onclick="selectStickerType('holo', this)">
+                <span class="opt-title">Holográfico</span>
+                <span class="opt-price">Desde $38.00</span>
+              </div>
+            </div>
+
+            <div style="font-size:0.85rem; font-weight:900; margin-bottom:6px; color:var(--bg-dark);">Paquete de Stickers:</div>
+            <div class="options-grid" id="stickerTiersGrid" style="grid-template-columns: repeat(2, 1fr);"></div>
+          </div>
+        `;
+        setTimeout(() => renderStickerTiers('white'), 10);
+      } else {
+        const defaultColor = prod.colors ? prod.colors[0] : { name: "Negro", hex: "#18181b" };
+        const currentUnitPrice = calculateShirtUnitPrice(shirtQty);
+
+        html += `
+          <!-- 1. ESPECIFICACIONES DE LA PRENDA -->
+          <div class="unified-specs-roster-box">
+            <div class="section-header-title" style="font-size:0.85rem; margin-bottom:6px;">1. Especificaciones de la Prenda</div>
+            <div class="specs-grid-3">
+              <div>
+                <label style="font-size:0.7rem; font-weight:800; color:var(--text-muted); margin-bottom:3px; display:block;">TIPO DE MATERIAL</label>
+                <select id="specFabric" class="form-control" style="padding:8px; font-size:0.78rem;">
+                  ${prod.fabrics ? prod.fabrics.map(f => `<option value="${f}">${f}</option>`).join('') : '<option value="Algodón">Algodón</option>'}
+                </select>
+              </div>
+              <div>
+                <label style="font-size:0.7rem; font-weight:800; color:var(--text-muted); margin-bottom:3px; display:block;">ESTILO</label>
+                <select id="specSleeve" class="form-control" style="padding:8px; font-size:0.78rem;">
+                  <option value="Manga Corta / Estándar">Manga Corta / Estándar</option>
+                  <option value="Manga Larga">Manga Larga</option>
+                </select>
+              </div>
+              <div>
+                <label style="font-size:0.7rem; font-weight:800; color:var(--text-muted); margin-bottom:3px; display:block;">CUELLO / ACABADO</label>
+                <select id="specCollar" class="form-control" style="padding:8px; font-size:0.78rem;">
+                  ${prod.collars ? prod.collars.map(c => `<option value="${c}">${c}</option>`).join('') : '<option value="Cuello Redondo">Cuello Redondo</option>'}
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. CANTIDAD DE PIEZAS (STEPPER) & LEYENDA DE PRECIOS ESCALADOS -->
+          <div class="qty-stepper-box" style="margin-top:12px;">
+            <div class="qty-stepper-row">
+              <span class="section-header-title" style="margin-bottom:0; font-size:0.85rem;">2. Cantidad de Piezas</span>
+              <div class="stepper-controls">
+                <button type="button" class="step-btn" onclick="adjustQuantity(-1)">-</button>
+                <input type="number" id="qtyInputBox" class="step-input" value="${shirtQty}" min="1" max="100" onchange="manualQuantityInput(this.value)">
+                <button type="button" class="step-btn" onclick="adjustQuantity(1)">+</button>
+              </div>
+            </div>
+            
+            <div class="unit-price-minimal">
+              <span>Precio unitario aplicado:</span>
+              <strong id="liveTierUnitPriceLabel">$${currentUnitPrice.toFixed(2)} USD c/u</strong>
+            </div>
+
+            <!-- LEYENDA DE PRECIOS ESCALADOS -->
+            <div class="volume-tier-legend">
+              <div class="vtl-header">
+                <span>📋</span> Escala de Precios por Volumen:
+              </div>
+              <div class="vtl-list">
+                <span class="vtl-item ${shirtQty >= 1 && shirtQty <= 5 ? 'highlight-tier' : ''}">1–5 —> $24.99 c/u</span>
+                <span class="vtl-item ${shirtQty >= 6 && shirtQty <= 11 ? 'highlight-tier' : ''}">6–11 —> $22.49 c/u</span>
+                <span class="vtl-item ${shirtQty >= 12 && shirtQty <= 23 ? 'highlight-tier' : ''}">12–23 —> $21.49 c/u</span>
+                <span class="vtl-item ${shirtQty >= 24 && shirtQty <= 35 ? 'highlight-tier' : ''}">24–35 —> $20.99 c/u</span>
+                <span class="vtl-item ${shirtQty >= 36 ? 'highlight-tier' : ''}">36+ —> $20.49 c/u</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. DESGLOSE DE TALLAS, COLORES Y NOMBRES -->
+          <div class="unified-specs-roster-box" style="margin-top:12px;">
+            <div class="section-header-title" style="font-size:0.85rem; margin-bottom:6px;">3. Desglose de Tallas, Colores y Nombres</div>
+            <div id="rosterRowsContainer">
+              <div class="roster-card-item">
+                <div class="roster-card-top-bar">
+                  <span class="roster-item-title">Combinación #1</span>
+                  <button type="button" class="btn-remove-row-styled" onclick="removeRosterRow(this)">🗑️ Eliminar</button>
+                </div>
+                <div class="roster-card-grid">
+                  <div>
+                    <label style="font-size:0.65rem; font-weight:800; color:var(--text-muted); display:block; margin-bottom:3px;">TALLA</label>
+                    <select class="form-control roster-size" style="padding:8px; font-size:0.78rem;">
+                      <option value="S">S</option><option value="M">M</option><option value="L">L</option><option value="XL" selected>XL</option><option value="2XL">2XL</option><option value="3XL">3XL</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label style="font-size:0.65rem; font-weight:800; color:var(--text-muted); display:block; margin-bottom:3px;">COLOR</label>
+                    <div class="row-color-dropdown">
+                      <button type="button" class="row-color-btn" onclick="toggleRowColorPopup(this)" style="padding:8px; font-size:0.75rem;">
+                        <span class="row-color-text" style="display:flex; align-items:center; gap:5px;"><span style="width:12px; height:12px; background:${defaultColor.hex}; border-radius:50%; display:inline-block;"></span> <span class="clr-lbl">${defaultColor.name}</span></span>
+                        <span>▼</span>
+                      </button>
+                      <div class="row-color-popup">
+                        <div class="row-swatches">
+                          ${prod.colors ? prod.colors.map(c => `<div class="row-swatch" style="background:${c.hex};" title="${c.name}" onclick="selectRowColor(this, '${c.hex}', '${c.name}')"></div>`).join('') : ''}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <label style="font-size:0.65rem; font-weight:800; color:var(--text-muted); display:block; margin-bottom:3px;">CANTIDAD</label>
+                    <input type="number" class="form-control roster-qty" value="${shirtQty}" min="1" max="100" style="padding:8px; font-size:0.78rem; text-align:center;" placeholder="Cant" onchange="syncQuantityToRows(this)">
+                  </div>
+                  <div>
+                    <label style="font-size:0.65rem; font-weight:800; color:var(--text-muted); display:block; margin-bottom:3px;">NOMBRE / NÚM</label>
+                    <input type="text" class="form-control roster-name" placeholder="Opcional" style="padding:8px; font-size:0.78rem;">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button type="button" class="btn-add-row" id="btnAddRosterRow" onclick="addRosterRow()">+ Agregar Otra Fila o Talla</button>
+            <div id="rosterCompleteNotice" class="roster-complete-notice">¡Roster configurado con éxito!</div>
+          </div>
+        `;
+      }
+
+      area.innerHTML = html;
+      updatePriceDisplay();
+      updateFreeShippingProgress();
+    }
+
+    let activeStickerType = 'white';
+    let selectedStickerTierIndex = 0;
+
+    function selectStickerType(type, el) {
+      activeStickerType = type;
+      selectedStickerTierIndex = 0;
+      document.getElementById('stkWhiteOpt').classList.remove('selected');
+      document.getElementById('stkHoloOpt').classList.remove('selected');
+      el.classList.add('selected');
+      renderStickerTiers(type);
+    }
+
+    function renderStickerTiers(type) {
+      const grid = document.getElementById('stickerTiersGrid');
+      if(!grid) return;
+      const tiers = productCatalog.stickers.subtypes[type].tiers;
+      
+      grid.innerHTML = tiers.map((t, i) => `
+        <div class="card-option ${i === selectedStickerTierIndex ? 'selected' : ''}" onclick="selectStickerTier(${i}, ${t.price}, this)">
+          ${t.qty === 50 ? '<span class="badge-most-popular" style="background:#0284c7;">Starter</span>' : ''}
+          <span class="opt-title">${t.label}</span>
+          <span class="opt-price">$${t.price.toFixed(2)}</span>
+        </div>
+      `).join('');
+      
+      selectedPrice = tiers[0].price;
+      updatePriceDisplay();
+    }
+
+    function selectStickerTier(index, price, el) {
+      selectedStickerTierIndex = index;
+      el.parentElement.querySelectorAll('.card-option').forEach(b => b.classList.remove('selected'));
+      el.classList.add('selected');
+      selectedPrice = price;
+      updatePriceDisplay();
+    }
+
+    function setShippingMode(mode) {
+      const btnNat = document.getElementById('btnShipNational');
+      const btnLoc = document.getElementById('btnShipLocal');
+      const subtotalProducts = cart.reduce((a,c) => a + c.price, 0);
+      const isCards = activeProdKey === 'cards';
+
+      if (mode === 'national') {
+        if(btnNat) btnNat.classList.add('active');
+        if(btnLoc) btnLoc.classList.remove('active');
+        
+        shippingCost = (subtotalProducts >= 75 || isCards) ? 0.00 : 8.99;
+        shippingMethodName = shippingCost === 0 ? "Envío gratuito por pedido de $75+" : "Envío por paquetería a cualquier parte de EE. UU. ($8.99)";
+      } else {
+        if(btnLoc) btnLoc.classList.add('active');
+        if(btnNat) btnNat.classList.remove('active');
+
+        shippingCost = 0.00;
+        shippingMethodName = "Entrega local en zona seleccionada (El Paso y alrededores)";
+      }
+      updateAccumulatedLiveTotal();
+    }
+
+    function checkZipCodeFreeDelivery(zip) {
+      const notice = document.getElementById('zipCodeNoticeMsg');
+      if (!notice) return;
+      
+      const cleanZip = zip.trim();
+      const totalProducts = cart.reduce((a,c) => a + c.price, 0);
+      const totalQuantity = cart.reduce((a,c) => a + (c.qty || 1), 0);
+
+      const isElPaso = cleanZip.startsWith('799') && cleanZip.length === 5;
+      const isSunlandOrNearby = cleanZip === '88063' || cleanZip.startsWith('880');
+
+      const btnLoc = document.getElementById('btnShipLocal');
+      const btnNat = document.getElementById('btnShipNational');
+
+      if (isElPaso || isSunlandOrNearby) {
+        shippingCost = 0.00;
+        shippingMethodName = "Entrega local en zona seleccionada (El Paso y alrededores)";
+        notice.innerHTML = "📍 <strong>Entrega en tu zona:</strong> Disponible en zonas seleccionadas de El Paso y alrededores ($0).";
+        notice.style.color = "#166534";
+        if(btnLoc) btnLoc.classList.add('active');
+        if(btnNat) btnNat.classList.remove('active');
+      } else if (cleanZip.length === 5) {
+        const isNearbyZone = cleanZip.startsWith('879') || cleanZip.startsWith('881') || cleanZip.startsWith('798');
+        
+        if (isNearbyZone || totalQuantity >= 24) {
+          shippingCost = 0.00;
+          shippingMethodName = "Entrega coordinada por mensaje";
+          notice.innerHTML = "💬 <strong>Entrega coordinada por mensaje:</strong> Fuera de cobertura de entrega directa. Nos pondremos en contacto contigo para coordinar la entrega.";
+          notice.style.color = "#b45309";
+          if(btnLoc) btnLoc.classList.add('active');
+          if(btnNat) btnNat.classList.remove('active');
+        } else {
+          shippingCost = (totalProducts >= 75 || activeProdKey === 'cards') ? 0.00 : 8.99;
+          shippingMethodName = shippingCost === 0 ? "Envío gratuito por pedido de $75+" : "Envío por paquetería a cualquier parte de EE. UU. ($8.99)";
+          notice.innerHTML = "📦 <strong>Envío:</strong> Envío por paquetería a cualquier parte de EE. UU. ($8.99).";
+          notice.style.color = "#0284c7";
+          if(btnNat) btnNat.classList.add('active');
+          if(btnLoc) btnLoc.classList.remove('active');
+        }
+      } else {
+        notice.innerHTML = "";
+      }
+      updateAccumulatedLiveTotal();
+    }
+
+    function adjustQuantity(delta) {
+      shirtQty = Math.max(1, shirtQty + delta);
+      renderDynamicFields(activeProdKey);
+    }
+
+    function manualQuantityInput(val) {
+      shirtQty = Math.max(1, parseInt(val) || 1);
+      renderDynamicFields(activeProdKey);
+    }
+
+    function applyTshirtPromoCode() {
+      const codeInput = document.getElementById('promoCodeInput').value.trim().toUpperCase();
+      const feedback = document.getElementById('promoFeedbackMsg');
+
+      if (codeInput.length > 0) {
+        tshirtCouponActive = true;
+        feedback.style.color = '#047857';
+        feedback.innerText = `✓ Cupón '${codeInput}' aplicado correctamente.`;
+        updatePriceDisplay();
+      } else {
+        tshirtCouponActive = false;
+        feedback.style.color = '#e11d48';
+        feedback.innerText = '❌ Introduce un código válido.';
+        updatePriceDisplay();
+      }
+    }
+
+    function toggleRowColorPopup(btn) {
+      document.querySelectorAll('.row-color-popup').forEach(p => { if(p !== btn.nextElementSibling) p.classList.remove('open'); });
+      const popup = btn.nextElementSibling;
+      if(popup) popup.classList.toggle('open');
+    }
+
+    function selectRowColor(swatch, hex, name) {
+      const container = swatch.closest('.row-color-dropdown');
+      const btnText = container.querySelector('.clr-lbl');
+      const dot = container.querySelector('.row-color-text span');
+      dot.style.background = hex;
+      btnText.innerText = name;
+      container.querySelector('.row-color-popup').classList.remove('open');
+    }
+
+    function addRosterRow() {
+      const container = document.getElementById('rosterRowsContainer');
+      const prod = productCatalog[activeProdKey];
+      const defaultColor = prod.colors ? prod.colors[0] : { name: "Negro", hex: "#18181b" };
+
+      let currentSum = 0;
+      document.querySelectorAll('.roster-qty').forEach(inp => { currentSum += parseInt(inp.value) || 0; });
+
+      if (currentSum >= shirtQty) {
+        alert(`Ya completaste las ${shirtQty} piezas totales en tu desglose de tallas.`);
+        return;
+      }
+
+      let remaining = shirtQty - currentSum;
+      let rowCount = container.querySelectorAll('.roster-card-item').length + 1;
+
+      const div = document.createElement('div');
+      div.className = 'roster-card-item';
+      div.innerHTML = `
+        <div class="roster-card-top-bar">
+          <span class="roster-item-title">Combinación #${rowCount}</span>
+          <button type="button" class="btn-remove-row-styled" onclick="removeRosterRow(this)">🗑️ Eliminar</button>
+        </div>
+        <div class="roster-card-grid">
+          <div>
+            <label style="font-size:0.65rem; font-weight:800; color:var(--text-muted); display:block; margin-bottom:3px;">TALLA</label>
+            <select class="form-control roster-size" style="padding:8px; font-size:0.78rem;">
+              <option value="S">S</option><option value="M">M</option><option value="L">L</option><option value="XL" selected>XL</option><option value="2XL">2XL</option><option value="3XL">3XL</option>
+            </select>
+          </div>
+          <div>
+            <label style="font-size:0.65rem; font-weight:800; color:var(--text-muted); display:block; margin-bottom:3px;">COLOR</label>
+            <div class="row-color-dropdown">
+              <button type="button" class="row-color-btn" onclick="toggleRowColorPopup(this)" style="padding:8px; font-size:0.75rem;">
+                <span class="row-color-text" style="display:flex; align-items:center; gap:5px;"><span style="width:12px; height:12px; background:${defaultColor.hex}; border-radius:50%; display:inline-block;"></span> <span class="clr-lbl">${defaultColor.name}</span></span>
+                <span>▼</span>
+              </button>
+              <div class="row-color-popup">
+                <div class="row-swatches">
+                  ${prod.colors ? prod.colors.map(c => `<div class="row-swatch" style="background:${c.hex};" title="${c.name}" onclick="selectRowColor(this, '${c.hex}', '${c.name}')"></div>`).join('') : ''}
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <label style="font-size:0.65rem; font-weight:800; color:var(--text-muted); display:block; margin-bottom:3px;">CANTIDAD</label>
+            <input type="number" class="form-control roster-qty" value="${remaining > 0 ? remaining : 1}" min="1" max="100" style="padding:8px; font-size:0.78rem; text-align:center;" placeholder="Cant" onchange="syncQuantityToRows(this)">
+          </div>
+          <div>
+            <label style="font-size:0.65rem; font-weight:800; color:var(--text-muted); display:block; margin-bottom:3px;">NOMBRE / NÚM</label>
+            <input type="text" class="form-control roster-name" placeholder="Opcional" style="padding:8px; font-size:0.78rem;">
+          </div>
+        </div>
+      `;
+      container.appendChild(div);
+      validateRosterSum();
+    }
+
+    function removeRosterRow(btn) {
+      if (document.querySelectorAll('.roster-card-item').length > 1) { 
+        btn.closest('.roster-card-item').remove(); 
+        validateRosterSum(); 
+      } else {
+        alert("Debe existir al menos una fila en el desglose de tallas.");
+      }
+    }
+
+    function syncQuantityToRows(inputEl) { validateRosterSum(); }
+
+    function validateRosterSum() {
+      let sum = 0;
+      document.querySelectorAll('.roster-qty').forEach(inp => { sum += parseInt(inp.value) || 0; });
+      const notice = document.getElementById('rosterCompleteNotice');
+      if (!notice) return;
+
+      if (sum === shirtQty) {
+        notice.style.display = 'block';
+        notice.style.background = '#f0fdf4';
+        notice.style.color = '#166534';
+        notice.innerHTML = `✓ ¡Perfecto! Las ${sum} piezas están completamente distribuidas en las tallas.`;
+      } else if (sum > shirtQty) {
+        notice.style.display = 'block';
+        notice.style.background = '#fef2f2';
+        notice.style.color = '#991b1b';
+        notice.innerHTML = `⚠️ La suma de tallas (${sum}) supera las ${shirtQty} piezas configuradas.`;
+      } else {
+        notice.style.display = 'block';
+        notice.style.background = '#fffbeb';
+        notice.style.color = '#92400e';
+        notice.innerHTML = `⚠️ Faltan ${shirtQty - sum} pieza(s) por asignar en el desglose de tallas.`;
+      }
+    }
+
+    function calculateShirtUnitPrice(qty) {
+      if (qty >= 1 && qty <= 5) return 24.99;
+      if (qty >= 6 && qty <= 11) return 22.49;
+      if (qty >= 12 && qty <= 23) return 21.49;
+      if (qty >= 24 && qty <= 35) return 20.99;
+      return 20.49;
+    }
+
+    function selectCardSides(sides, el) {
+      cardSides = sides;
+      el.parentElement.querySelectorAll('.card-option').forEach(b => b.classList.remove('selected'));
+      el.classList.add('selected');
+
+      const tier = productCatalog.cards.tiers[selectedTierIndex];
+      if (selectedTierIndex === 0 && promoCodeApplied) {
+        selectedPrice = cardSides === 'Single-Sided' ? tier.promoSingle : tier.promoDouble;
+      } else {
+        selectedPrice = cardSides === 'Single-Sided' ? tier.single : tier.double;
+      }
+      renderDynamicFields('cards');
+      updatePriceDisplay();
+    }
+
+    function selectCardTier(index, price, el) {
+      selectedTierIndex = index;
+      if (index !== 0) promoCodeApplied = false;
+
+      const tier = productCatalog.cards.tiers[index];
+      if (index === 0 && promoCodeApplied) {
+        selectedPrice = cardSides === 'Single-Sided' ? tier.promoSingle : tier.promoDouble;
+      } else {
+        selectedPrice = cardSides === 'Single-Sided' ? tier.single : tier.double;
+      }
+
+      el.parentElement.querySelectorAll('.card-option').forEach(b => b.classList.remove('selected'));
+      el.classList.add('selected');
+      renderDynamicFields('cards');
+      updatePriceDisplay();
+    }
+
+    function updatePriceDisplay() {
+      let base = 0;
+
+      if (activeProdKey === 'cards') {
+        base = selectedPrice;
+      } else if (activeProdKey === 'shirt_corp' || activeProdKey === 'shirt_reg' || activeProdKey === 'sport') {
+        let unitPrice = calculateShirtUnitPrice(shirtQty);
+        if (tshirtCouponActive) {
+          unitPrice = unitPrice * 0.90;
+        }
+        base = unitPrice * shirtQty;
+      } else if (activeProdKey === 'caps') {
+        base = 24.99 * shirtQty;
+      } else if (activeProdKey === 'stickers') {
+        base = selectedPrice;
+      } else {
+        base = selectedPrice;
+      }
+
+      selectedPrice = base;
+      document.getElementById('priceDisplay').innerText = `$${selectedPrice.toFixed(2)} (Tax Incluido)`;
+      updateFreeShippingProgress();
+    }
+
+    function updateFreeShippingProgress() {
+      let totalProducts = cart.reduce((acc, item) => acc + item.price, 0);
+      let isCards = activeProdKey === 'cards';
+      
+      let progressText = document.getElementById('fspProgressText');
+      let barFill = document.getElementById('fspBarFill');
+      let statusMsg = document.getElementById('fspStatusMsg');
+      if (!progressText || !barFill || !statusMsg) return;
+
+      let percent = Math.min(100, (totalProducts / 75) * 100);
+      barFill.style.width = percent + '%';
+      progressText.innerText = `$${totalProducts.toFixed(2)} / $75.00`;
+
+      if (isCards || totalProducts >= 75) {
+        if (shippingCost > 0 && shippingMethodName.includes("paquetería")) {
+          shippingCost = 0.00;
+          shippingMethodName = "Envío gratuito por pedido de $75+";
+        }
+        statusMsg.innerHTML = `🎉 ¡Desbloqueaste el <strong>Envío Gratis</strong> en tu carrito mixto!`;
+        statusMsg.style.color = '#166534';
+      } else {
+        let diff = (75 - totalProducts).toFixed(2);
+        statusMsg.innerHTML = `💡 Agrega <strong>$${diff} USD</strong> más (mezclando stickers, gorras o camisetas) para envío nacional gratis.`;
+        statusMsg.style.color = 'var(--text-muted)';
+      }
+      updateAccumulatedLiveTotal();
+    }
+
+    function updateAccumulatedLiveTotal() {
+      let totalProducts = cart.reduce((acc, item) => acc + item.price, 0);
+      let grandTotal = totalProducts + shippingCost;
+      document.getElementById('liveTotalAmount').innerText = `$${grandTotal.toFixed(2)}`;
+      document.getElementById('cartTotalDisplay').innerText = `$${grandTotal.toFixed(2)}`;
+      document.getElementById('cartBadgeCountBottom').innerText = cart.length;
+    }
+
+    function handleAddToCart(e) {
+      e.preventDefault();
+
+      let specSummary = productCatalog[activeProdKey].title;
+      let qtyVal = shirtQty;
+
+      if (activeProdKey === 'cards') {
+        const tier = productCatalog.cards.tiers[selectedTierIndex];
+        qtyVal = tier.qty;
+        specSummary = `${tier.qty} Tarjetas | ${cardSides}`;
+      } else if (activeProdKey === 'stickers') {
+        const selectedStkTierObj = productCatalog.stickers.subtypes[activeStickerType].tiers[selectedStickerTierIndex];
+        qtyVal = selectedStkTierObj.qty;
+        specSummary = `${selectedStkTierObj.label} (${activeStickerType.toUpperCase()})`;
+      } else {
+        let rosterDetails = [];
+        document.querySelectorAll('.roster-card-item').forEach(row => {
+          let sz = row.querySelector('.roster-size')?.value || 'M';
+          let col = row.querySelector('.clr-lbl')?.innerText || 'Negro';
+          let qVal = row.querySelector('.roster-qty')?.value || '1';
+          let nm = row.querySelector('.roster-name')?.value || 'Sin nombre';
+          rosterDetails.push(`[Talla: ${sz} | Color: ${col} | Cant: ${qVal} | Nombre/Num: ${nm}]`);
+        });
+        if (rosterDetails.length > 0) {
+          specSummary += ` ➔ ` + rosterDetails.join(' | ');
+        }
+      }
+
+      const item = {
+        title: productCatalog[activeProdKey].title,
+        price: selectedPrice,
+        qty: qtyVal,
+        size: specSummary,
+        notes: document.getElementById('custNotes')?.value || 'Ninguna'
+      };
+
+      cart.push(item);
+      localStorage.setItem('rax_cart', JSON.stringify(cart));
+      updateCartUI();
+      toggleCartDrawer();
+      alert("¡Producto agregado al carrito con éxito!");
+    }
+
+    function updateCartUI() {
+      const container = document.getElementById('cartItemsContainer');
+      let totalProducts = 0;
+
+      if (cart.length === 0) {
+        container.innerHTML = `<p style="text-align:center; color:var(--text-muted); margin-top:20px;">Tu carrito está vacío.</p>`;
+        document.getElementById('cartTotalDisplay').innerText = "$0.00";
+        updateFreeShippingProgress();
+        return;
+      }
+
+      container.innerHTML = cart.map((item, idx) => {
+        totalProducts += item.price;
+        return `
+          <div style="padding-bottom:10px; margin-bottom:10px; border-bottom:1px solid #e2e8f0; position:relative;">
+            <button onclick="removeFromCart(${idx})" style="position:absolute; right:0; top:0; background:none; border:none; color:red; font-weight:bold; cursor:pointer; padding:6px;">✕</button>
+            <strong style="font-size:0.85rem;">${item.title}</strong>
+            <p style="font-size:0.72rem; color:var(--brand-primary); font-weight:700;">${item.size}</p>
+            <span style="font-weight:800; color:var(--brand-primary); font-size:0.85rem;">$${item.price.toFixed(2)} (Tax Incluido)</span>
+          </div>
+        `;
+      }).join('');
+
+      updateFreeShippingProgress();
+    }
+
+    function removeFromCart(idx) {
+      cart.splice(idx, 1);
+      localStorage.setItem('rax_cart', JSON.stringify(cart));
+      updateCartUI();
+    }
+
+    function toggleCartDrawer() { document.getElementById('cartDrawer').classList.toggle('open'); }
+
+    function proceedToCheckoutView() {
+      if (cart.length === 0) {
+        alert("Tu carrito está vacío.");
+        return;
+      }
+      document.getElementById('cartDrawerTitle').innerText = "Checkout / Datos de Envío";
+      document.getElementById('cartBodyItemsView').style.display = 'none';
+      document.getElementById('cartBodyCheckoutView').style.display = 'block';
+      document.getElementById('freeShippingWidgetBox').style.display = 'none';
+      document.getElementById('btnProceedCheckout').style.display = 'none';
+      document.getElementById('btnFinalPay').style.display = 'block';
+    }
+
+    function backToCartItemsView() {
+      document.getElementById('cartDrawerTitle').innerText = "Tu Carrito de Pedido";
+      document.getElementById('cartBodyItemsView').style.display = 'block';
+      document.getElementById('cartBodyCheckoutView').style.display = 'none';
+      document.getElementById('freeShippingWidgetBox').style.display = 'flex';
+      document.getElementById('btnProceedCheckout').style.display = 'block';
+      document.getElementById('btnFinalPay').style.display = 'none';
+    }
+
+    function openInvoiceModal(isSample = false) {
+      if (cart.length === 0) {
+        alert("Tu carrito está vacío.");
+        return;
+      }
+
+      const customerName = document.getElementById('custName')?.value.trim() || (currentCustomer ? currentCustomer.name : "Invitado General");
+      const customerPhone = document.getElementById('custPhone')?.value.trim() || (currentCustomer ? currentCustomer.phone : "(555) 000-0000");
+      const customerEmail = document.getElementById('custEmail')?.value.trim() || (currentCustomer ? currentCustomer.email : "invitado@raxcreations.com");
+      
+      const street = document.getElementById('custStreetAddress')?.value.trim() || '';
+      const city = document.getElementById('custCity')?.value.trim() || '';
+      const state = document.getElementById('custState')?.value.trim() || '';
+      const zip = document.getElementById('cartZipCode')?.value.trim() || '';
+      
+      const fullAddress = street ? `${street}, ${city}, ${state} ${zip}` : (zip ? `ZIP Code: ${zip}` : "Dirección postal no especificada");
+
+      if (!currentCustomer && (!customerName || !customerPhone || !customerEmail || !street)) {
+        alert("Por favor completa los datos de contacto y la dirección postal completa en el checkout antes de continuar.");
+        return;
+      }
+      
+      generatedFolio = 'RAX-' + Math.floor(1000 + Math.random() * 9000);
+      generatedTrackingNumber = isSample ? 'SAMPLE-PREVIEW-ONLY' : 'TRK-' + Math.floor(100000000 + Math.random() * 900000000);
+
+      document.getElementById('invFolio').innerText = `Folio: ${generatedFolio}`;
+      document.getElementById('invDate').innerText = `Fecha: ${new Date().toLocaleDateString()} ${new Date().toLocaleTimeString()}`;
+      document.getElementById('invTrackingNum').innerText = generatedTrackingNumber;
+      
+      document.getElementById('invHeaderTitle').innerText = isSample ? 'Muestra de Nota de Compra (Admin)' : 'Factura de Compra';
+
+      document.getElementById('invClientName').innerText = `${customerName} (${customerEmail})`;
+      document.getElementById('invClientAddress').innerText = fullAddress;
+      document.getElementById('invClientContactPhone').innerText = customerPhone;
+
+      const tbody = document.getElementById('invoiceTableBody');
+      tbody.innerHTML = '';
+      
+      let subtotalProducts = 0;
+
+      cart.forEach((item) => {
+        subtotalProducts += item.price;
+        const unitPrice = item.price / item.qty;
+        tbody.innerHTML += `
+          <tr>
+            <td><strong>${item.title}</strong><br><span style="color:var(--text-muted); font-size:0.7rem;">${item.size} | Notas: ${item.notes}</span></td>
+            <td style="text-align: center;">${item.qty}</td>
+            <td style="text-align: right;">$${unitPrice.toFixed(2)}</td>
+            <td style="text-align: right;">$${item.price.toFixed(2)}</td>
+          </tr>
+        `;
+      });
+
+      document.getElementById('invSubtotalText').innerText = `$${subtotalProducts.toFixed(2)}`;
+      document.getElementById('invShippingText').innerText = `${shippingMethodName} ($${shippingCost.toFixed(2)})`;
+      
+      let grandTotal = subtotalProducts + shippingCost;
+      document.getElementById('invGrandTotalText').innerText = `$${grandTotal.toFixed(2)}`;
+
+      document.getElementById('invoiceModal').classList.add('open');
+    }
+
+    function closeInvoiceModal() {
+      document.getElementById('invoiceModal').classList.remove('open');
+    }
+
+    function finalizeAndSendOrder() {
+      if (cart.length === 0) { alert("Tu carrito está vacío."); return; }
+
+      const customerName = document.getElementById('custName')?.value.trim() || (currentCustomer ? currentCustomer.name : "");
+      const customerPhone = document.getElementById('custPhone')?.value.trim() || (currentCustomer ? currentCustomer.phone : "");
+      const customerEmail = document.getElementById('custEmail')?.value.trim() || (currentCustomer ? currentCustomer.email : "");
+      const street = document.getElementById('custStreetAddress')?.value.trim() || "";
+
+      if (!currentCustomer && (!customerName || !customerPhone || !customerEmail || !street)) {
+        alert("Por favor completa los datos de contacto y la dirección postal completa en el checkout antes de continuar.");
+        return;
+      }
+      
+      openInvoiceModal(false);
+      
+      const ownerEmail = "rm.creations14@gmail.com";
+      const subject = encodeURIComponent(`NOTA DE COMPRA ${generatedFolio} - RAX CREATIONS`);
+      const grandTotalVal = (cart.reduce((a,c)=>a+c.price,0)+shippingCost).toFixed(2);
+      const body = encodeURIComponent(`Orden procesada con éxito.\nCliente: ${customerName} (${customerEmail})\nDirección: ${street}\nFolio: ${generatedFolio}\nTracking: ${generatedTrackingNumber}\nMétodo: ${shippingMethodName}\nTotal Pagado: $${grandTotalVal}`);
+      
+      window.location.href = `mailto:${ownerEmail}?subject=${subject}&body=${body}`;
+
+      let orderRecord = {
+        folio: generatedFolio,
+        date: new Date().toLocaleDateString(),
+        total: grandTotalVal,
+        status: "En preparación",
+        itemsSummary: cart.map(i=>i.title).join(', ')
+      };
+      customerOrders.unshift(orderRecord);
+      localStorage.setItem('rax_customer_orders', JSON.stringify(customerOrders));
+
+      alert(`¡Pedido procesado con éxito!\n\nFolio: ${generatedFolio}\nMétodo: ${shippingMethodName}\n\nFactura de compra generada y lista.`);
+      
+      cart = [];
+      localStorage.removeItem('rax_cart');
+      updateCartUI();
+      backToCartItemsView();
+      toggleCartDrawer();
+    }
+  </script>
+</body>
+</html>
