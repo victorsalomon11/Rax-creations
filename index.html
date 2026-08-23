@@ -249,6 +249,96 @@
       transition: 0.2s;
     }
     .upload-zone:hover { border-color: var(--brand-primary); background: #f1f5f9; }
+
+    /* ESTILOS DE LA GALERÍA MODERNA DE VIDEOS */
+    .video-gallery-section {
+      padding: 48px 20px;
+      background: #f1f5f9;
+      border-top: 1px solid var(--border-light);
+      margin-top: 40px;
+    }
+    .video-gallery-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .video-gallery-title {
+      font-size: 1.4rem;
+      font-weight: 900;
+      color: var(--bg-dark);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 6px;
+    }
+    .video-gallery-subtitle {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      font-weight: 600;
+      margin-bottom: 32px;
+    }
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      text-align: left;
+    }
+    .video-card {
+      background: #ffffff;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(15, 23, 42, 0.05);
+      border: 1px solid var(--border-light);
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .video-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 25px rgba(15, 23, 42, 0.1);
+    }
+    .video-container-responsive {
+      position: relative;
+      padding-bottom: 177.77%; /* Relación de aspecto 9:16 vertical */
+      height: 0;
+      width: 100%;
+      background: #000;
+    }
+    .video-container-responsive iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+    .video-info {
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      flex-grow: 1;
+    }
+    .video-tag {
+      font-size: 0.68rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      padding: 3px 8px;
+      border-radius: 4px;
+      width: fit-content;
+    }
+    .video-title-card {
+      font-size: 0.95rem;
+      font-weight: 800;
+      color: var(--bg-dark);
+      line-height: 1.3;
+    }
+    .video-desc {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      font-weight: 500;
+      line-height: 1.4;
+    }
   </style>
 </head>
 <body>
@@ -341,76 +431,76 @@
 
   </div>
 
-  <!-- SECCIÓN DE VIDEOS VERTICALES -->
-  <section id="galeria-videos" style="padding: 40px 20px; background-color: #f1f5f9; font-family: 'Plus Jakarta Sans', sans-serif; margin-top: 20px;">
-      <div style="max-width: 1200px; margin: 0 auto; text-align: center;">
-          <h2 style="font-size: 26px; color: #0f172a; margin-bottom: 8px; font-weight: 900; text-transform: uppercase; letter-spacing: 0.5px;">Nuestros Trabajos en Acción</h2>
-          <p style="color: #64748b; font-size: 15px; margin-bottom: 30px; font-weight: 600;">Descubre en formato corto la calidad real de nuestros jerseys, DTF, stickers, gorras y tarjetas.</p>
-          
-          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; text-align: left;">
-              
-              <!-- Video 1: Jersey -->
-              <div style="background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.06); border: 1px solid #e2e8f0;">
-                  <div style="position: relative; padding-bottom: 177.77%; height: 0;">
-                      <iframe style="position: absolute; top:0; left:0; width:100%; height:100%; border:0;" src="https://www.youtube.com/embed/nXDUdbYFX8U" title="Jersey Personalizado RAX Creations" allowfullscreen></iframe>
-                  </div>
-                  <div style="padding: 15px;">
-                      <span style="background: #e0e7ff; color: #3730a3; font-size: 11px; padding: 4px 8px; border-radius: 4px; font-weight: 900; text-transform: uppercase;">Jerseys</span>
-                      <h3 style="font-size: 16px; margin: 8px 0 4px 0; color: #0f172a; font-weight: 800;">Jersey Personalizado</h3>
-                      <p style="font-size: 13px; color: #64748b; margin: 0; font-weight: 500;">Diseño y acabados deportivos de alta durabilidad.</p>
-                  </div>
-              </div>
-
-              <!-- Video 2: DTF Semitono -->
-              <div style="background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.06); border: 1px solid #e2e8f0;">
-                  <div style="position: relative; padding-bottom: 177.77%; height: 0;">
-                      <iframe style="position: absolute; top:0; left:0; width:100%; height:100%; border:0;" src="https://www.youtube.com/embed/75UFdenav3I" title="DTF Semitono Exclusivo RAX" allowfullscreen></iframe>
-                  </div>
-                  <div style="padding: 15px;">
-                      <span style="background: #fee2e2; color: #991b1b; font-size: 11px; padding: 4px 8px; border-radius: 4px; font-weight: 900; text-transform: uppercase;">Exclusivo RAX</span>
-                      <h3 style="font-size: 16px; margin: 8px 0 4px 0; color: #0f172a; font-weight: 800;">DTF Semitono</h3>
-                      <p style="font-size: 13px; color: #64748b; margin: 0; font-weight: 500;">Texturas suaves con máxima definición textil.</p>
-                  </div>
-              </div>
-
-              <!-- Video 3: Stickers -->
-              <div style="background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.06); border: 1px solid #e2e8f0;">
-                  <div style="position: relative; padding-bottom: 177.77%; height: 0;">
-                      <iframe style="position: absolute; top:0; left:0; width:100%; height:100%; border:0;" src="https://www.youtube.com/embed/Kp7MVjCGetk" title="Stickers Personalizados RAX" allowfullscreen></iframe>
-                  </div>
-                  <div style="padding: 15px;">
-                      <span style="background: #fef3c7; color: #92400e; font-size: 11px; padding: 4px 8px; border-radius: 4px; font-weight: 900; text-transform: uppercase;">Stickers</span>
-                      <h3 style="font-size: 16px; margin: 8px 0 4px 0; color: #0f172a; font-weight: 800;">Stickers Die-Cut</h3>
-                      <p style="font-size: 13px; color: #64748b; margin: 0; font-weight: 500;">Vinil de alta resistencia con cortes precisos.</p>
-                  </div>
-              </div>
-
-              <!-- Video 4: Gorras -->
-              <div style="background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.06); border: 1px solid #e2e8f0;">
-                  <div style="position: relative; padding-bottom: 177.77%; height: 0;">
-                      <iframe style="position: absolute; top:0; left:0; width:100%; height:100%; border:0;" src="https://www.youtube.com/embed/lIPSbM37cNA" title="Gorras Personalizadas RAX" allowfullscreen></iframe>
-                  </div>
-                  <div style="padding: 15px;">
-                      <span style="background: #d1fae5; color: #065f46; font-size: 11px; padding: 4px 8px; border-radius: 4px; font-weight: 900; text-transform: uppercase;">Gorras</span>
-                      <h3 style="font-size: 16px; margin: 8px 0 4px 0; color: #0f172a; font-weight: 800;">Gorras Personalizadas</h3>
-                      <p style="font-size: 13px; color: #64748b; margin: 0; font-weight: 500;">Estampados firmes y acabados profesionales.</p>
-                  </div>
-              </div>
-
-              <!-- Video 5: Tarjetas -->
-              <div style="background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.06); border: 1px solid #e2e8f0;">
-                  <div style="position: relative; padding-bottom: 177.77%; height: 0;">
-                      <iframe style="position: absolute; top:0; left:0; width:100%; height:100%; border:0;" src="https://www.youtube.com/embed/95IrbToMqnY" title="Tarjetas de Presentación RAX" allowfullscreen></iframe>
-                  </div>
-                  <div style="padding: 15px;">
-                      <span style="background: #e0e7ff; color: #3730a3; font-size: 11px; padding: 4px 8px; border-radius: 4px; font-weight: 900; text-transform: uppercase;">Tarjetas</span>
-                      <h3 style="font-size: 16px; margin: 8px 0 4px 0; color: #0f172a; font-weight: 800;">Tarjetas de Presentación</h3>
-                      <p style="font-size: 13px; color: #64748b; margin: 0; font-weight: 500;">Papelería comercial elegante que destaca tu marca.</p>
-                  </div>
-              </div>
-
+  <!-- SECCIÓN MODERNA DE VIDEOS VERTICALES INTEGRADA -->
+  <section class="video-gallery-section">
+    <div class="video-gallery-inner">
+      <h2 class="video-gallery-title">Nuestros Trabajos en Acción</h2>
+      <p class="video-gallery-subtitle">Descubre en formato corto la calidad real de nuestros jerseys, impresiones DTF, stickers, gorras y tarjetas.</p>
+      
+      <div class="video-grid">
+        
+        <!-- Video 1: Jersey -->
+        <div class="video-card">
+          <div class="video-container-responsive">
+            <iframe src="https://www.youtube.com/embed/nXDUdbYFX8U" title="Jersey Personalizado RAX Creations" allowfullscreen></iframe>
           </div>
+          <div class="video-info">
+            <span class="video-tag" style="background: #e0e7ff; color: #3730a3;">Jerseys</span>
+            <h3 class="video-title-card">Jersey Personalizado</h3>
+            <p class="video-desc">Diseño y acabados deportivos de alta durabilidad.</p>
+          </div>
+        </div>
+
+        <!-- Video 2: DTF Semitono -->
+        <div class="video-card">
+          <div class="video-container-responsive">
+            <iframe src="https://www.youtube.com/embed/75UFdenav3I" title="DTF Semitono Exclusivo RAX" allowfullscreen></iframe>
+          </div>
+          <div class="video-info">
+            <span class="video-tag" style="background: #fee2e2; color: #991b1b;">Exclusivo RAX</span>
+            <h3 class="video-title-card">DTF Semitono</h3>
+            <p class="video-desc">Texturas suaves con máxima definición textil.</p>
+          </div>
+        </div>
+
+        <!-- Video 3: Stickers -->
+        <div class="video-card">
+          <div class="video-container-responsive">
+            <iframe src="https://www.youtube.com/embed/Kp7MVjCGetk" title="Stickers Personalizados RAX" allowfullscreen></iframe>
+          </div>
+          <div class="video-info">
+            <span class="video-tag" style="background: #fef3c7; color: #92400e;">Stickers</span>
+            <h3 class="video-title-card">Stickers Die-Cut</h3>
+            <p class="video-desc">Vinil de alta resistencia con cortes precisos.</p>
+          </div>
+        </div>
+
+        <!-- Video 4: Gorras -->
+        <div class="video-card">
+          <div class="video-container-responsive">
+            <iframe src="https://www.youtube.com/embed/lIPSbM37cNA" title="Gorras Personalizadas RAX" allowfullscreen></iframe>
+          </div>
+          <div class="video-info">
+            <span class="video-tag" style="background: #d1fae5; color: #065f46;">Gorras</span>
+            <h3 class="video-title-card">Gorras Personalizadas</h3>
+            <p class="video-desc">Estampados firmes y acabados profesionales.</p>
+          </div>
+        </div>
+
+        <!-- Video 5: Tarjetas -->
+        <div class="video-card">
+          <div class="video-container-responsive">
+            <iframe src="https://www.youtube.com/embed/95IrbToMqnY" title="Tarjetas de Presentación RAX" allowfullscreen></iframe>
+          </div>
+          <div class="video-info">
+            <span class="video-tag" style="background: #e0e7ff; color: #3730a3;">Tarjetas</span>
+            <h3 class="video-title-card">Tarjetas de Presentación</h3>
+            <p class="video-desc">Papelería comercial elegante que destaca tu marca.</p>
+          </div>
+        </div>
+
       </div>
+    </div>
   </section>
 
   <script>
