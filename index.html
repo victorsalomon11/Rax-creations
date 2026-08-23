@@ -239,7 +239,16 @@
     }
     .btn-primary-action:hover { background: var(--brand-primary-hover); transform: translateY(-1px); }
 
-    .hidden { display: none !important; }
+    .upload-zone {
+      border: 2px dashed #cbd5e1;
+      padding: 24px;
+      text-align: center;
+      border-radius: var(--radius-md);
+      background: #f8fafc;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+    .upload-zone:hover { border-color: var(--brand-primary); background: #f1f5f9; }
   </style>
 </head>
 <body>
@@ -308,14 +317,23 @@
     <!-- TARJETA PRINCIPAL DE CONFIGURACIÓN -->
     <div class="unified-card">
       <div id="dynamicFormContainer">
-        <!-- Contenido dinámico según el producto seleccionado -->
         <div class="section-header-title">Configuración de Camiseta para Compañía</div>
         <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:15px;">Ideal para uniformes de trabajo con logotipo en pecho y espalda.</p>
         
-        <div style="display:flex; flex-direction:column; gap:12px;">
-          <label style="font-size:0.82rem; font-weight:800;">Cantidad de Piezas:</label>
-          <input type="number" class="form-control" value="10" min="1" id="mainQuantityInput">
-          
+        <div style="display:flex; flex-direction:column; gap:14px;">
+          <div>
+            <label style="font-size:0.82rem; font-weight:800; display:block; margin-bottom:6px;">Cantidad de Piezas:</label>
+            <input type="number" class="form-control" value="10" min="1" id="mainQuantityInput">
+          </div>
+
+          <div>
+            <label style="font-size:0.82rem; font-weight:800; display:block; margin-bottom:6px;">Sube tu diseño o logotipo:</label>
+            <div class="upload-zone">
+              <p style="font-size:0.85rem; font-weight:700; color:var(--brand-primary);">📁 Haz clic aquí para adjuntar archivo (PNG, AI, PDF)</p>
+              <span style="font-size:0.75rem; color:var(--text-muted);">Te enviaremos una muestra digital previa por correo/WhatsApp.</span>
+            </div>
+          </div>
+
           <button class="btn-primary-action" type="button" style="margin-top:10px;">Continuar con el Pedido</button>
         </div>
       </div>
@@ -323,13 +341,12 @@
 
   </div>
 
-  <!-- SECCIÓN DE VIDEOS VERTICALES (INTEGRADA CORRECTAMENTE) -->
+  <!-- SECCIÓN DE VIDEOS VERTICALES -->
   <section id="galeria-videos" style="padding: 40px 20px; background-color: #f1f5f9; font-family: 'Plus Jakarta Sans', sans-serif; margin-top: 20px;">
       <div style="max-width: 1200px; margin: 0 auto; text-align: center;">
           <h2 style="font-size: 26px; color: #0f172a; margin-bottom: 8px; font-weight: 900; text-transform: uppercase; letter-spacing: 0.5px;">Nuestros Trabajos en Acción</h2>
           <p style="color: #64748b; font-size: 15px; margin-bottom: 30px; font-weight: 600;">Descubre en formato corto la calidad real de nuestros jerseys, DTF, stickers, gorras y tarjetas.</p>
           
-          <!-- Cuadrícula de videos -->
           <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; text-align: left;">
               
               <!-- Video 1: Jersey -->
@@ -403,18 +420,22 @@
         container.innerHTML = `
           <div class="section-header-title">Configuración de Tarjetas de Presentación</div>
           <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:15px;">Papel premium con acabado brillante o mate. Envío gratis incluido.</p>
-          <div style="display:flex; flex-direction:column; gap:12px;">
-            <label style="font-size:0.82rem; font-weight:800;">Cantidad:</label>
-            <input type="number" class="form-control" value="500" min="100" step="100">
+          <div style="display:flex; flex-direction:column; gap:14px;">
+            <div>
+              <label style="font-size:0.82rem; font-weight:800; display:block; margin-bottom:6px;">Cantidad:</label>
+              <input type="number" class="form-control" value="500" min="100" step="100">
+            </div>
             <button class="btn-primary-action" type="button" style="margin-top:10px;">Calcular y Ordenar</button>
           </div>`;
       } else {
         container.innerHTML = `
           <div class="section-header-title">Configuración de Productos RAX</div>
           <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:15px;">Selecciona las opciones para tu pedido personalizado.</p>
-          <div style="display:flex; flex-direction:column; gap:12px;">
-            <label style="font-size:0.82rem; font-weight:800;">Cantidad de Piezas:</label>
-            <input type="number" class="form-control" value="10" min="1">
+          <div style="display:flex; flex-direction:column; gap:14px;">
+            <div>
+              <label style="font-size:0.82rem; font-weight:800; display:block; margin-bottom:6px;">Cantidad de Piezas:</label>
+              <input type="number" class="form-control" value="10" min="1">
+            </div>
             <button class="btn-primary-action" type="button" style="margin-top:10px;">Continuar con el Pedido</button>
           </div>`;
       }
