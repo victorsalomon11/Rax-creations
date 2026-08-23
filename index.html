@@ -708,168 +708,176 @@
     let currentProductKey = 'shirt_corp';
 
     const productsData = {
-      cards: {
-        name: "Tarjetas de Presentación",
-        basePrice: 19.99,
-        videoUrl: "https://www.youtube.com/embed/yNnEDZ7vjw",
-        uploadLabel: "Sube tu logotipo o diseño (PDF, AI, PNG, JPG):",
-        optionsHTML: `
-          <div style="display:grid; grid-template-columns: 1fr 1fr; gap:10px;">
-            <div>
-              <label style="font-size:0.78rem; font-weight:800; margin-bottom:4px; display:block;">Cantidad:</label>
-              <select id="cardQty" class="form-control" onchange="updatePrice()">
-                <option value="19.99">500 Tarjetas ($19.99)</option>
-                <option value="32.99">1,000 Tarjetas ($32.99)</option>
-                <option value="59.99">2,500 Tarjetas ($59.99)</option>
-              </select>
-            </div>
-            <div>
-              <label style="font-size:0.78rem; font-weight:800; margin-bottom:4px; display:block;">Acabado:</label>
-              <select id="cardFinish" class="form-control">
-                <option value="mate">Mate Sedoso</option>
-                <option value="brillo">Brillante UV</option>
-                <option value="soft">Soft Touch</option>
-              </select>
-            </div>
-          </div>
-        `
-      },
-      shirt_corp: {
-        name: "Camiseta para Compañía (Pecho y Espalda)",
-        basePrice: 24.99,
-        videoUrl: "https://www.youtube.com/embed/mbJx2K-LPTQ",
-        uploadLabel: "Sube el logo para Pecho (izq) y Espalda:",
-        optionsHTML: `
-          <div style="display:grid; grid-template-columns: 1fr 1fr; gap:10px;">
-            <div>
-              <label style="font-size:0.78rem; font-weight:800; margin-bottom:4px; display:block;">Talla y Cantidad:</label>
-              <select id="shirtSize" class="form-control" onchange="updatePrice()">
-                <option value="24.99">Chica (S) - $24.99</option>
-                <option value="24.99" selected>Mediana (M) - $24.99</option>
-                <option value="24.99">Grande (L) - $24.99</option>
-                <option value="26.99">Extra Grande (XL) - $26.99</option>
-                <option value="29.99">2XL / 3XL - $29.99</option>
-              </select>
-            </div>
-            <div>
-              <label style="font-size:0.78rem; font-weight:800; margin-bottom:4px; display:block;">Color de Camiseta:</label>
-              <select id="shirtColor" class="form-control">
-                <option value="marino">Azul Marino</option>
-                <option value="negro">Negro Carbón</option>
-                <option value="gris">Gris Jaspe</option>
-                <option value="blanco">Blanco Puro</option>
-              </select>
-            </div>
-          </div>
-        `
-      },
-      stickers: {
-        name: "Stickers Impresos Personalizados",
-        basePrice: 15.00,
-        videoUrl: "https://www.youtube.com/embed/Kp7MVjCGetk",
-        uploadLabel: "Sube tu archivo troquelado (Vector / PNG alta resolución):",
-        optionsHTML: `
-          <div style="display:grid; grid-template-columns: 1fr 1fr; gap:10px;">
-            <div>
-              <label style="font-size:0.78rem; font-weight:800; margin-bottom:4px; display:block;">Cantidad:</label>
-              <select id="stickerQty" class="form-control" onchange="updatePrice()">
-                <option value="15.00">50 Stickers ($15.00)</option>
-                <option value="25.00">100 Stickers ($25.00)</option>
-                <option value="45.00">250 Stickers ($45.00)</option>
-              </select>
-            </div>
-            <div>
-              <label style="font-size:0.78rem; font-weight:800; margin-bottom:4px; display:block;">Corte y Material:</label>
-              <select id="stickerFinish" class="form-control">
-                <option value="vinil_brillo">Vinil Brillante (Resistente Agua)</option>
-                <option value="vinil_mate">Vinil Mate Premium</option>
-                <option value="holografico">Holográfico Especial</option>
-              </select>
-            </div>
-          </div>
-        `
-      },
-      shirt_reg: {
-        name: "Camiseta con Diseño Libre",
-        basePrice: 21.99,
-        videoUrl: "https://www.youtube.com/embed/75UFdenav3I",
-        uploadLabel: "Sube tu diseño para la camiseta:",
-        optionsHTML: `
-          <div style="display:grid; grid-template-columns: 1fr 1fr; gap:10px;">
-            <div>
-              <label style="font-size:0.78rem; font-weight:800; margin-bottom:4px; display:block;">Talla:</label>
-              <select id="regSize" class="form-control">
-                <option value="S">Chica (S)</option>
-                <option value="M" selected>Mediana (M)</option>
-                <option value="L">Grande (L)</option>
-                <option value="XL">Extra Grande (XL)</option>
-              </select>
-            </div>
-            <div>
-              <label style="font-size:0.78rem; font-weight:800; margin-bottom:4px; display:block;">Color:</label>
-              <input type="text" id="regColor" class="form-control" value="Negro">
-            </div>
-          </div>
-        `
-      },
-      caps: {
-        name: "Gorras Personalizadas",
-        basePrice: 18.50,
-        videoUrl: "https://www.youtube.com/embed/lIPSbM37cNA",
-        uploadLabel: "Sube tu logotipo bordado (PNG / DST):",
-        optionsHTML: `
-          <div style="display:grid; grid-template-columns: 1fr 1fr; gap:10px;">
-            <div>
-              <label style="font-size:0.78rem; font-weight:800; margin-bottom:4px; display:block;">Estilo de Gorra:</label>
-              <select id="capStyle" class="form-control">
-                <option value="trucker">Trucker (Malla)</option>
-                <option value="baseball">Beisbolera Cerrada</option>
-                <option value="dadhat">Dad Hat Casual</option>
-              </select>
-            </div>
-            <div>
-              <label style="font-size:0.78rem; font-weight:800; margin-bottom:4px; display:block;">Cantidad:</label>
-              <input type="number" id="capQty" class="form-control" value="1" min="1" onchange="updatePrice()">
-            </div>
-          </div>
-        `
-      },
-      sport: {
-        name: "Uniformes Deportivos",
-        basePrice: 35.00,
-        videoUrl: "https://youtube.com/embed/THNSoHNoU5c?feature=share",
-        uploadLabel: "Sube la lista de nombres/números o diseño del equipo:",
-        optionsHTML: `
-          <div style="display:grid; grid-template-columns: 1fr 1fr; gap:10px;">
-            <div>
-              <label style="font-size:0.78rem; font-weight:800; margin-bottom:4px; display:block;">Deporte / Tipo:</label>
-              <select id="sportType" class="form-control">
-                <option value="soccer">Jersey de Fútbol</option>
-                <option value="basketball">Uniforme Basquetbol</option>
-                <option value="baseball">Jersey Beisbol</option>
-              </select>
-            </div>
-            <div>
-              <label style="font-size:0.78rem; font-weight:800; margin-bottom:4px; display:block;">Cantidad de Sets:</label>
-              <input type="number" id="sportQty" class="form-control" value="10" min="1" onchange="updatePrice()">
-            </div>
-          </div>
-        `
-      },
-      shirt_house: {
-        name: "Camisetas Originales RAX",
-        basePrice: 22.00,
-        videoUrl: "https://www.youtube.com/embed/75UFdenav3I",
-        uploadLabel: "Selección de diseño de colección RAX:",
-        optionsHTML: `
-          <div>
-            <label style="font-size:0.78rem; font-weight:800; margin-bottom:4px; display:block;">Edición Colección:</label>
-            <select id="houseEdition" class="form-control">
-              <option value="ed1">Edición Limitada Tipografía Urbana</option>
-              <option value="ed2">Edición Minimalista Vintage</option>
-            </select>
-          </div>
-        `
+  cards: {
+    name: "Tarjetas de Presentación",
+    basePrice: 19.99,
+    videoUrl: "https://www.youtube.com/embed/yNnEDZ7vjw",
+    uploadLabel: "Sube tu logotipo o diseño (PDF, AI, PNG, JPG):",
+    optionsHTML: `
+      <div style="display:grid; grid-template-columns: 1fr 1fr; gap:10px;">
+        <div>
+          <label style="font-size:0.78rem; font-weight:800; margin-bottom:4px; display:block;">Cantidad:</label>
+          <select id="cardQty" class="form-control" onchange="updatePrice()">
+            <option value="19.99">500 Tarjetas ($19.99)</option>
+            <option value="32.99">1,000 Tarjetas ($32.99)</option>
+            <option value="59.99">2,500 Tarjetas ($59.99)</option>
+          </select>
+        </div>
+        <div>
+          <label style="font-size:0.78rem; font-weight:800; margin-bottom:4px; display:block;">Acabado:</label>
+          <select id="cardFinish" class="form-control">
+            <option value="mate">Mate Sedoso</option>
+            <option value="brillo">Brillante UV</option>
+            <option value="soft">Soft Touch</option>
+          </select>
+        </div>
+      </div>
+    `
+  },
+
+  shirt_corp: {
+    name: "Camiseta para Compañía (Pecho y Espalda)",
+    basePrice: 24.99,
+    videoUrl: "https://www.youtube.com/embed/mbJx2K-LPTQ",
+    uploadLabel: "Sube el logo para Pecho (izq) y Espalda:",
+    optionsHTML: `
+      <div style="display:grid; grid-template-columns: 1fr 1fr; gap:10px;">
+        <div>
+          <label style="font-size:0.78rem; font-weight:800; margin-bottom:4px; display:block;">Talla y Cantidad:</label>
+          <select id="shirtSize" class="form-control" onchange="updatePrice()">
+            <option value="24.99">Chica (S) - $24.99</option>
+            <option value="24.99" selected>Mediana (M) - $24.99</option>
+            <option value="24.99">Grande (L) - $24.99</option>
+            <option value="26.99">Extra Grande (XL) - $26.99</option>
+            <option value="29.99">2XL / 3XL - $29.99</option>
+          </select>
+        </div>
+        <div>
+          <label style="font-size:0.78rem; font-weight:800; margin-bottom:4px; display:block;">Color de Camiseta:</label>
+          <select id="shirtColor" class="form-control">
+            <option value="marino">Azul Marino</option>
+            <option value="negro">Negro Carbón</option>
+            <option value="gris">Gris Jaspe</option>
+            <option value="blanco">Blanco Puro</option>
+          </select>
+        </div>
+      </div>
+    `
+  },
+
+  stickers: {
+    name: "Stickers Impresos Personalizados",
+    basePrice: 15.00,
+    videoUrl: "https://www.youtube.com/embed/Kp7MVjCGetk",
+    uploadLabel: "Sube tu archivo troquelado (Vector / PNG alta resolución):",
+    optionsHTML: `
+      <div style="display:grid; grid-template-columns: 1fr 1fr; gap:10px;">
+        <div>
+          <label style="font-size:0.78rem; font-weight:800; margin-bottom:4px; display:block;">Cantidad:</label>
+          <select id="stickerQty" class="form-control" onchange="updatePrice()">
+            <option value="15.00">50 Stickers ($15.00)</option>
+            <option value="25.00">100 Stickers ($25.00)</option>
+            <option value="45.00">250 Stickers ($45.00)</option>
+          </select>
+        </div>
+        <div>
+          <label style="font-size:0.78rem; font-weight:800; margin-bottom:4px; display:block;">Corte y Material:</label>
+          <select id="stickerFinish" class="form-control">
+            <option value="vinil_brillo">Vinil Brillante (Resistente Agua)</option>
+            <option value="vinil_mate">Vinil Mate Premium</option>
+            <option value="holografico">Holográfico Especial</option>
+          </select>
+        </div>
+      </div>
+    `
+  },
+
+  shirt_reg: {
+    name: "Camiseta con Diseño Libre",
+    basePrice: 21.99,
+    videoUrl: "https://www.youtube.com/embed/75UFdenav3I",
+    uploadLabel: "Sube tu diseño para la camiseta:",
+    optionsHTML: `
+      <div style="display:grid; grid-template-columns: 1fr 1fr; gap:10px;">
+        <div>
+          <label style="font-size:0.78rem; font-weight:800; margin-bottom:4px; display:block;">Talla:</label>
+          <select id="regSize" class="form-control">
+            <option value="S">Chica (S)</option>
+            <option value="M" selected>Mediana (M)</option>
+            <option value="L">Grande (L)</option>
+            <option value="XL">Extra Grande (XL)</option>
+          </select>
+        </div>
+        <div>
+          <label style="font-size:0.78rem; font-weight:800; margin-bottom:4px; display:block;">Color:</label>
+          <input type="text" id="regColor" class="form-control" value="Negro">
+        </div>
+      </div>
+    `
+  },
+
+  caps: {
+    name: "Gorras Personalizadas",
+    basePrice: 18.50,
+    videoUrl: "https://www.youtube.com/embed/lIPSbM37cNA",
+    uploadLabel: "Sube tu logotipo bordado (PNG / DST):",
+    optionsHTML: `
+      <div style="display:grid; grid-template-columns: 1fr 1fr; gap:10px;">
+        <div>
+          <label style="font-size:0.78rem; font-weight:800; margin-bottom:4px; display:block;">Estilo de Gorra:</label>
+          <select id="capStyle" class="form-control">
+            <option value="trucker">Trucker (Malla)</option>
+            <option value="baseball">Beisbolera Cerrada</option>
+            <option value="dadhat">Dad Hat Casual</option>
+          </select>
+        </div>
+        <div>
+          <label style="font-size:0.78rem; font-weight:800; margin-bottom:4px; display:block;">Cantidad:</label>
+          <input type="number" id="capQty" class="form-control" value="1" min="1" onchange="updatePrice()">
+        </div>
+      </div>
+    `
+  },
+
+  sport: {
+    name: "Uniformes Deportivos",
+    basePrice: 35.00,
+    videoUrl: "https://www.youtube.com/embed/THNSoHNoU5c",
+    uploadLabel: "Sube la lista de nombres/números o diseño del equipo:",
+    optionsHTML: `
+      <div style="display:grid; grid-template-columns: 1fr 1fr; gap:10px;">
+        <div>
+          <label style="font-size:0.78rem; font-weight:800; margin-bottom:4px; display:block;">Deporte / Tipo:</label>
+          <select id="sportType" class="form-control">
+            <option value="soccer">Jersey de Fútbol</option>
+            <option value="basketball">Uniforme Basquetbol</option>
+            <option value="baseball">Jersey Beisbol</option>
+          </select>
+        </div>
+        <div>
+          <label style="font-size:0.78rem; font-weight:800; margin-bottom:4px; display:block;">Cantidad de Sets:</label>
+          <input type="number" id="sportQty" class="form-control" value="10" min="1" onchange="updatePrice()">
+        </div>
+      </div>
+    `
+  },
+
+  shirt_house: {
+    name: "Camisetas Originales RAX",
+    basePrice: 22.00,
+    videoUrl: "https://www.youtube.com/embed/75UFdenav3I",
+    uploadLabel: "Selección de diseño de colección RAX:",
+    optionsHTML: `
+      <div>
+        <label style="font-size:0.78rem; font-weight:800; margin-bottom:4px; display:block;">Edición Colección:</label>
+        <select id="houseEdition" class="form-control">
+          <option value="ed1">Edición Limitada Tipografía Urbana</option>
+          <option value="ed2">Edición Minimalista Vintage</option>
+        </select>
+      </div>
+    `
+  }
+};
       },
       commercial_hub: {
         name: "Rotulación y Vinil de Corte",
